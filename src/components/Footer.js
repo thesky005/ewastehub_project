@@ -4,17 +4,17 @@ import styled from 'styled-components'
 const Footer = () => {
     return (
         <Container>
-            
-            
-           <Logo>
-                <img src='\images\logoLight.ac6c7baa381e9eae7cf5.png'></img> 
+
+
+            <Logo>
+                <img src='\images\logoLight.ac6c7baa381e9eae7cf5.png'></img>
                 <SocialMedia>
                     <a><img src='\images\Facebook.svg'></img></a>
                     <a><img src='\images\Instagram.svg'></img></a>
                     <a><img src='\images\Twitter.svg'></img></a>
                 </SocialMedia>
-           </Logo>
-           <FooterContent>
+            </Logo>
+            <FooterContent>
                 <Content>
                     <ContentItem>
                         <h3>About Us</h3>
@@ -44,8 +44,8 @@ const Footer = () => {
                         </ul>
                     </ContentItem>
                 </Content>
-           </FooterContent>
-            
+            </FooterContent>
+
         </Container>
     )
 }

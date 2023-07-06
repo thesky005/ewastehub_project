@@ -53,58 +53,58 @@ const Middle = () => {
       <StepLine>
         <ImgLine>
           <div className='step'>
-          <ImgLineWrap>
-            <Wrapimg>
-              <img src='\images\Presentation.svg'></img>
-            </Wrapimg>
-            <Wrap0>
-              <Wrap1>
-                <p>1</p>
-              </Wrap1>
-            </Wrap0>
-            <Wrap2><p>Post Your Project</p></Wrap2>
-            <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
-          </ImgLineWrap>
-          <ImgLineWrap>
-            <Wrapimg>
-              <img src='\images\Presentation.svg'></img>
-            </Wrapimg>
-            <Wrap0>
-              <Wrap1>
-                <p>2</p>
-              </Wrap1>
-            </Wrap0>
-            <Wrap2> <p>Post Your Project</p>  </Wrap2>
-            <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
-          </ImgLineWrap>
-          <ImgLineWrap>
-            <Wrapimg>
-              <img src='\images\Presentation.svg'></img>
-            </Wrapimg>
-            <Wrap0>
-              <Wrap1>
-                <p>3</p>
-              </Wrap1>
-            </Wrap0>
-            <Wrap0>
-              <Wrap2> <p>Post Your Project</p>  </Wrap2>
-            </Wrap0>
-            <Wrap0>
+            <ImgLineWrap>
+              <Wrapimg>
+                <img src='\images\Presentation.svg'></img>
+              </Wrapimg>
+              <Wrap0>
+                <Wrap1>
+                  <p>1</p>
+                </Wrap1>
+              </Wrap0>
+              <Wrap2><p>Post Your Project</p></Wrap2>
               <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
-            </Wrap0>
-          </ImgLineWrap>
-          <ImgLineWrap>
-            <Wrapimg>
-              <img src='\images\Presentation.svg'></img>
-            </Wrapimg>
-            <Wrap0>
-              <Wrap1>
-                <p>4</p>
-              </Wrap1>
-            </Wrap0>
-            <Wrap2> <p>Post Your Project</p>  </Wrap2>
-            <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
-          </ImgLineWrap>
+            </ImgLineWrap>
+            <ImgLineWrap>
+              <Wrapimg>
+                <img src='\images\Presentation.svg'></img>
+              </Wrapimg>
+              <Wrap0>
+                <Wrap1>
+                  <p>2</p>
+                </Wrap1>
+              </Wrap0>
+              <Wrap2> <p>Post Your Project</p>  </Wrap2>
+              <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+            </ImgLineWrap>
+            <ImgLineWrap>
+              <Wrapimg>
+                <img src='\images\Presentation.svg'></img>
+              </Wrapimg>
+              <Wrap0>
+                <Wrap1>
+                  <p>3</p>
+                </Wrap1>
+              </Wrap0>
+              <Wrap0>
+                <Wrap2> <p>Post Your Project</p>  </Wrap2>
+              </Wrap0>
+              <Wrap0>
+                <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+              </Wrap0>
+            </ImgLineWrap>
+            <ImgLineWrap>
+              <Wrapimg>
+                <img src='\images\Presentation.svg'></img>
+              </Wrapimg>
+              <Wrap0>
+                <Wrap1>
+                  <p>4</p>
+                </Wrap1>
+              </Wrap0>
+              <Wrap2> <p>Post Your Project</p>  </Wrap2>
+              <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+            </ImgLineWrap>
           </div>
         </ImgLine>
         {/* <img src='\images\Worker.svg'></img>
@@ -136,11 +136,8 @@ const Middle = () => {
             </div>
           </div>
         </div>
-        <img className="rectangle" alt="Rectangle" src="\images\person.png"/>
+        <img className="rectangle" alt="Rectangle" src="\images\person.png" />
       </Section>
-
-
-
     </Container>
   )
 }

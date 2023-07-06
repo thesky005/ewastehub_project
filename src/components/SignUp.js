@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
 
-    
+
     const auth = firebase.auth();
     const db = firebase.firestore();
     const navigate = useNavigate()
@@ -24,19 +24,58 @@ const SignUp = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [password, setPassword] = useState('');
-/*
+    /*
+        const handleRegistration = (e) => {
+            e.preventDefault();
+    
+            auth
+            .createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                    const user = userCredential.user;
+    
+    
+    
+                    // Add user details to Firestore collection
+                    firebase.firestore().collection('costumer').doc(user.uid).set({
+                        nationalId,
+                        mobile,
+                        dateOfBirth,
+                        email,
+                        firstName,
+                        lastName,
+                    });
+    
+                    // Send email verification
+                    
+                    user.sendEmailVerification();
+    
+                    // Clear form inputs
+                    setNationalId('');
+                    setMobile('');
+                    setDateOfBirth('');
+                    setEmail('');
+                    setFirstName('');
+                    setLastName('');
+                    setPassword('');
+    
+                    console.log('Registration successful. Verification email sent.');
+                })
+                .catch((error) => {
+                    console.error('Registration failed:', error);
+                });
+        };
+    */
+
     const handleRegistration = (e) => {
         e.preventDefault();
 
         auth
-        .createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
+            .createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
                 const user = userCredential.user;
 
-
-
                 // Add user details to Firestore collection
-                firebase.firestore().collection('costumer').doc(user.uid).set({
+                firebase.firestore().collection('landingpage-costumer').doc(user.uid).set({
                     nationalId,
                     mobile,
                     dateOfBirth,
@@ -45,9 +84,10 @@ const SignUp = () => {
                     lastName,
                 });
 
-                // Send email verification
-                
-                user.sendEmailVerification();
+                // user.sendEmailVerification().then(() => {
+                //     // Navigate to the verification page after sending the verification email
+                //     navigate('/verification');
+                //   });
 
                 // Clear form inputs
                 setNationalId('');
@@ -58,56 +98,16 @@ const SignUp = () => {
                 setLastName('');
                 setPassword('');
 
-                console.log('Registration successful. Verification email sent.');
+                navigate('/verification');
+
+                console.log('Registration successful.');
+                console.log(user)
             })
             .catch((error) => {
                 console.error('Registration failed:', error);
             });
     };
-*/
 
-const handleRegistration = (e) => {
-    e.preventDefault();
-
-    auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-            const user = userCredential.user;
-
-            // Add user details to Firestore collection
-            firebase.firestore().collection('costumer').doc(user.uid).set({
-                nationalId,
-                mobile,
-                dateOfBirth,
-                email,
-                firstName,
-                lastName,
-            });
-
-            // user.sendEmailVerification().then(() => {
-            //     // Navigate to the verification page after sending the verification email
-            //     navigate('/verification');
-            //   });
-
-            // Clear form inputs
-            setNationalId('');
-            setMobile('');
-            setDateOfBirth('');
-            setEmail('');
-            setFirstName('');
-            setLastName('');
-            setPassword('');
-
-            navigate('/verification');
-
-            console.log('Registration successful. Verification email sent.');
-            console.log(user)
-        })
-        .catch((error) => {
-            console.error('Registration failed:', error);
-        });
-};
-      
     return (
 
         <Container>
@@ -186,13 +186,13 @@ const handleRegistration = (e) => {
                             </div>
                         </div>
                     </Term>
-                    
+
                     <SignUpBtn type="submit" onSubmit={handleRegistration} onClick={handleRegistration}>
                         <div className="overlap-group" >
                             <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Sign Up</h1>
                         </div>
                     </SignUpBtn>
-                   
+
                     <Merchant>Not a customer sign up as <a href='merchant1'>Merchant</a>.</Merchant>
                 </Form>
             </Content>
@@ -277,7 +277,8 @@ const Heading = styled.div`
     width: 642px;
 
     @media screen and (max-width:768px){
-        margin-left: 46px;
+        margin-left: 17px;
+        font-size: 20px;
     }
 
  `
@@ -285,7 +286,7 @@ const FormItem = styled.div`
  
     margin-bottom: 32px;
     @media screen and (max-width:768px){
-        margin-left: 46px;
+        margin-left: 26px;
     }
     
  `
@@ -323,6 +324,17 @@ const Item = styled.div`
         width: 200px;
 }
 
+@media screen and (max-width : 768px){
+    p{
+        font-size: 16px;
+        width: 147px;
+    }
+    input{
+        height: 42px;
+        width: 250px;
+    }
+}
+
  `
 const SignUpBtn = styled.div`
     display: flex;
@@ -333,7 +345,7 @@ const SignUpBtn = styled.div`
     margin-left: 110px;
     cursor: pointer;
     @media screen and (max-width:768px){
-        margin-left: 104px;
+        margin-left: 84px;
     }
     
     .overlap-group {
@@ -366,7 +378,7 @@ const SignUpBtn = styled.div`
 
 const Term = styled.div`
 @media screen and (max-width:768px){
-        margin-left: 24px;
+        margin-left: 1px;
     }
     .i-m-over-years {
         color: #bdbcbc;
@@ -432,5 +444,5 @@ const Term = styled.div`
     }
 `
 const Merchant = styled.div`
-    margin-left: 69px;
+    margin-left: 39px;
 `

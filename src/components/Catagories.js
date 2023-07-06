@@ -4,7 +4,7 @@ import Header from './Header'
 
 const Catagories = () => {
 
-    
+
 
     return (
         <Container id='categories-section'>

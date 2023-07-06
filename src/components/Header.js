@@ -1,10 +1,10 @@
-import React, { useContext , useState} from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { LanguageContext } from './LanguageContext'
 import en from '../locales/en.json';
 import ar from '../locales/ar.json';
 import { useNavigate } from 'react-router-dom';
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 const Header = () => {
@@ -55,48 +55,48 @@ const Header = () => {
   };
 
   return (
-   //<Nav>
+    //<Nav>
     <NavBar>
       <Rgt>
-      <Logo>
-        <img src='\images\logoDark.5f0dd6e5be677a6d9328.png' alt='img'></img>
-      </Logo>
-      <NavMenu>
-        <span>Home</span>
-        <span onClick={() => scrollToSection('categories-section')}>Categories</span>
-        <span>About Us</span>
-      </NavMenu>
+        <Logo>
+          <img src='\images\logoDark.5f0dd6e5be677a6d9328.png' alt='img'></img>
+        </Logo>
+        <NavMenu>
+          <span>Home</span>
+          <span onClick={() => scrollToSection('categories-section')}>Categories</span>
+          <span>About Us</span>
+        </NavMenu>
       </Rgt>
       {/* <Button> <p>{t('getinapp')}</p></Button> */}
       <Left>
-      <Lft>
-      <Button>
-         <img src = '\images\circum_mobile-1.svg'></img>
-         <p>Get in App</p></Button>
-      <Button1 onClick={navigator}><p>Sign Up</p></Button1>
-      <LangToggel>
-        <img src = '\images\Arabic.svg'></img>
-        {/* <button onClick={toggleLanguage}>Toggle Language</button> */}
-      </LangToggel>
-      </Lft>
-      <Menubtn >
-        <img src="/images/134216_menu_lines_hamburger_icon.svg" alt="Menu" onClick={handleToggle} />
-     
-      {isOpen && (
-        <DropDown>
-          <span onClick={() => handleOptionClick('Home')}>Home</span>
-          <hr />
-          <span onClick={() => handleOptionClick('Categories')}>Categories</span>
-          <hr />
-          <span onClick={() => handleOptionClick('Sign Up')}>Sign Up</span>
-          <hr />
-          <span onClick={() => handleOptionClick('Get App')}>Get App</span>
-          <hr />
-        </DropDown>
-        
-      )}
-       </Menubtn>
-       </Left>
+        <Lft>
+          <Button>
+            <img src='\images\circum_mobile-1.svg'></img>
+            <p>Get in App</p></Button>
+          <Button1 onClick={navigator}><p>Sign Up</p></Button1>
+          <LangToggel>
+            <img src='\images\Arabic.svg'></img>
+            {/* <button onClick={toggleLanguage}>Toggle Language</button> */}
+          </LangToggel>
+        </Lft>
+        <Menubtn >
+          <img src="/images/134216_menu_lines_hamburger_icon.svg" alt="Menu" onClick={handleToggle} />
+
+          {isOpen && (
+            <DropDown>
+              <span onClick={() => handleOptionClick('Home')}>Home</span>
+              <hr />
+              <span onClick={() => handleOptionClick('Categories')}>Categories</span>
+              <hr />
+              <span onClick={() => handleOptionClick('Sign Up')}>Sign Up</span>
+              <hr />
+              <span onClick={() => handleOptionClick('Get App')}>Get App</span>
+              <hr />
+            </DropDown>
+
+          )}
+        </Menubtn>
+      </Left>
     </NavBar>
     //</Nav> 
   )

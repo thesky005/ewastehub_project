@@ -42,22 +42,19 @@ const Verification = () => {
 
   return (
     <Container>
-      <div className="email-verification">
-        <div className="div">
-          <img className="email" alt="Email" src="email.png" />
-          <div className="group">
-            <div className="overlap-group" onClick={handleVerifyEmail}>
-              <h1 className="text-wrapper">Verify Email</h1>
-            </div>
+
+      <Img><img className="email" alt="Email" src="\images\Email.png" /></Img>
+      <Text1>
+        <p>You have entered {email} as the email adrress for your account</p>
+        <p className="p">Please verify this email adress by clicking button below</p>
+      </Text1>
+      <Wrap3>
+        <div className="group">
+          <div className="overlap-group" onClick={handleVerifyEmail}>
+            <h1 className="text-wrapper">Verify Email</h1>
           </div>
-          <p className="you-have-entered">
-            <span className="span">You have entered </span>
-            <span className="text-wrapper-2">{email}</span>
-            <span className="span"> as the email adrress for your account </span>
-          </p>
-          <p className="p">Please verify this email adress by clicking button below</p>
         </div>
-      </div>
+      </Wrap3>
     </Container>
   )
 }
@@ -65,100 +62,80 @@ const Verification = () => {
 export default Verification
 
 const Container = styled.div`
-.email-verification {
-  background-color: #ffffff;
+
+  margin-top: 100px;
+  align-items: center;
+  
+
+`
+const Text1 = styled.div`
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  @media screen and (max-width : 768px){
+    font-size: 16px;
+    p{
+      /* max-width: 200px;
+      justify-content: center; */
+      margin: 0 15px;
+      text-align: center;
+      padding: 20px 20px;
+    }
+  }
+  
+
+`
+const Img = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  width: 100%;
-}
+  align-items: center;
+  padding: 25px;
 
-.email-verification .div {
-  background-color: #ffffff;
-  border: 1px none;
-  height: 1024px;
-  position: relative;
-  width: 1440px;
-}
+  @media screen and (max-width : 768px){
+    img{width: 60%;}
+  }
 
-.email-verification .email {
-  height: 273px;
-  left: 583px;
-  object-fit: cover;
-  position: absolute;
-  top: 163px;
-  width: 273px;
-}
+`
+const Wrap3 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.email-verification .group {
+  .group {
   height: 75px;
-  /* left: 526px;
-  position: absolute;
-  top: 610px; */
-  width: 411px;
+  width: 299px;
   cursor: pointer;
 }
 
-.email-verification .overlap-group {
+.overlap-group {
   background: linear-gradient(180deg, rgb(29, 3, 71) 0%, rgba(29, 3, 71, 0.75) 100%);
   border-radius: 15px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 75px;
+  height: 55px;
   position: relative;
-  width: 409px;
+  width: 299px;
 }
 
-.email-verification .text-wrapper {
+.text-wrapper {
   color: #ffffff;
   font-family: "Inter-SemiBold", Helvetica;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
-  left: 108px;
+  //left: 108px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 18px;
-  white-space: nowrap;
-  width: 193px;
-}
-
-.email-verification .you-have-entered {
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  left: 234px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 487px;
-  width: 1015px;
-}
-
-.email-verification .span {
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.email-verification .text-wrapper-2 {
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-}
-
-.email-verification .p {
-  color: #000000;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  left: 383px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 533px;
-  width: 674px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:15px;
 }
 
 `

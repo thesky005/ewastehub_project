@@ -4,49 +4,49 @@ import Header from './Header'
 
 const Merchant = () => {
     return (
-        
+
         <Container>
             <Content>
-            <Img>
-                <img src='\images\merchant.jpg'></img>
-            </Img>
-            <Form>
-                <Heading> <h2>Merchant  Registration</h2> </Heading>
+                <Img>
+                    <img src='\images\merchant.jpg'></img>
+                </Img>
+                <Form>
+                    <Heading> <h2>Merchant  Registration</h2> </Heading>
 
-                <FormItem>
-                    <Item>
-                        <p>Company Name</p>
-                        <input type='text' placeholder='Enter your company name'></input>
-                    </Item>
-                    <Item>
-                        <p>Company Registration No* </p>
-                        <input type='text' placeholder='Enter your Company Registration'></input>
-                    </Item>
-                    <Item>
-                        <p>Email Adress*</p>
-                        <input type='text' placeholder='Enter your Email Adress'></input>
-                    </Item>
-                    <Item>
-                        <p>Mobile No*</p>
-                        <input type='text' placeholder='Enter your Mobile No '></input>
-                    </Item>
-                    <Item>
-                        <p>Authorized Representative</p>
-                        <input type='text' placeholder='Enter your Representative Full Name'></input>
-                    </Item>
-                    <Item>
-                        <p>Authorized Representative’s National ID*</p>
-                        <input type='text' placeholder='Enter your Authorized Representative’s National ID*'></input>
-                    </Item>
-                </FormItem>
-                <SignUpBtn>
-                    <a href='/merchant1'>
-                    <div className="overlap-group">
-                        <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Next</h1>
-                    </div>
-                    </a>
-                </SignUpBtn>
-            </Form>
+                    <FormItem>
+                        <Item>
+                            <p>Company Name</p>
+                            <input type='text' placeholder='Enter your company name'></input>
+                        </Item>
+                        <Item>
+                            <p>Company Registration No* </p>
+                            <input type='text' placeholder='Enter your Company Registration'></input>
+                        </Item>
+                        <Item>
+                            <p>Email Adress*</p>
+                            <input type='text' placeholder='Enter your Email Adress'></input>
+                        </Item>
+                        <Item>
+                            <p>Mobile No*</p>
+                            <input type='text' placeholder='Enter your Mobile No '></input>
+                        </Item>
+                        <Item>
+                            <p>Authorized Representative</p>
+                            <input type='text' placeholder='Enter your Representative Full Name'></input>
+                        </Item>
+                        <Item>
+                            <p>Authorized Representative’s National ID*</p>
+                            <input type='text' placeholder='Enter your Authorized Representative’s National ID*'></input>
+                        </Item>
+                    </FormItem>
+                    <SignUpBtn>
+                        <a href='/merchant1'>
+                            <div className="overlap-group">
+                                <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Next</h1>
+                            </div>
+                        </a>
+                    </SignUpBtn>
+                </Form>
             </Content>
         </Container>
     )

@@ -2,103 +2,103 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Main = () => {
-    return (
-        <Container>
-            <TextContent>
-                <RenovateTag>
-                    <div className="box">
-                        <div className="mail-button-wrapper">
-                            <div className="mail-button">
-                                <div className="overlap-group">
-                                    <div className="text-wrapper">Renovate with ease</div>
-                                    <img className="vector" alt="Vector" src="\images\Vector.svg" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </RenovateTag>
-                <RenovateText>
-                    <div className="label">
-                        <div className="renovate-your-home-wrapper">
-                            <h1 className="renovate-your-home">
-                                <span className="text-wrapper">Renovate your home with</span>
-                                <span className="span">&nbsp;</span>
-                                <span className="text-wrapper-2">RENO</span>
-                                <span className="text-wrapper-3">&nbsp;</span>
-                            </h1>
-                        </div>
-                    </div>
-                </RenovateText>
-                <Text>
-                    <div className="label">
-                        <div className="p-wrapper">
-                            <p className="text-wrapper">We help you find the best contractor for your home renovation</p>
-                        </div>
-                    </div>
-                </Text>
-                <Button>
-                    <GetStarted>
-                        <div className="box">
-                            <div className="get-started-box-wrapper">
-                                <div className="get-started-box">
-                                    <div className="overlap-group">
-                                        <div className="rectangle" />
-                                        <div className="text-wrapper">Get Started</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </GetStarted>
-                    <FindContractor>
-                        <div className="box">
-                            <div className="find-contractors-box-wrapper">
-                                <div className="find-contractors-box">
-                                    <div className="overlap-group">
-                                        <div className="rectangle" />
-                                        <div className="text-wrapper">Find Contractors</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </FindContractor>
-                </Button>
-            </TextContent>
-            <ImgContent>
-                <div className="box">
-                    <div className="main-photo-ara-wrapper">
-                        <div className="main-photo-ara">
-                            <div className="overlap">
-                                <img className="rectangle" alt="Rectangle" src="\images\Rectangle3.png" />
-                                <div className="add-profile">
-                                    <img className="add-user" alt="Add user" src="\images\Add user.svg" />
-                                </div>
-                            </div>
-                            <div className="overlap-group">
-                                <img className="img" alt="Rectangle" src="\images\Rectangle4.png" />
-                                <div className="send-message">
-                                    <img className="send" alt="Send" src="\images\Send.svg" />
-                                </div>
-                            </div>
-                            
-                            <div className="div">
-                                <img className="rectangle-2" alt="Rectangle" src="\images\Rectangle5.png" />
-                                <div className="top-workers">
-                                    <div className="overlap-group-2">
-                                        <div className="rec" />
-                                        <div className="text-wrapper">Top Contractors</div>
-                                        <img className="worker" alt="Worker" src="\images\Worker.svg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <Container>
+      <TextContent>
+        <RenovateTag>
+          <div className="box">
+            <div className="mail-button-wrapper">
+              <div className="mail-button">
+                <div className="overlap-group">
+                  <div className="text-wrapper">Renovate with ease</div>
+                  <img className="vector" alt="Vector" src="\images\Vector.svg" />
                 </div>
-            </ImgContent>
+              </div>
+            </div>
+          </div>
+        </RenovateTag>
+        <RenovateText>
+          <div className="label">
+            <div className="renovate-your-home-wrapper">
+              <h1 className="renovate-your-home">
+                <span className="text-wrapper">Renovate your home with</span>
+                <span className="span">&nbsp;</span>
+                <span className="text-wrapper-2">RENO</span>
+                <span className="text-wrapper-3">&nbsp;</span>
+              </h1>
+            </div>
+          </div>
+        </RenovateText>
+        <Text>
+          <div className="label">
+            <div className="p-wrapper">
+              <p className="text-wrapper">We help you find the best contractor for your home renovation</p>
+            </div>
+          </div>
+        </Text>
+        <Button>
+          <GetStarted>
+            <div className="box">
+              <div className="get-started-box-wrapper">
+                <div className="get-started-box">
+                  <div className="overlap-group">
+                    <div className="rectangle" />
+                    <div className="text-wrapper">Get Started</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </GetStarted>
+          <FindContractor>
+            <div className="box">
+              <div className="find-contractors-box-wrapper">
+                <div className="find-contractors-box">
+                  <div className="overlap-group">
+                    <div className="rectangle" />
+                    <div className="text-wrapper">Find Contractors</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FindContractor>
+        </Button>
+      </TextContent>
+      <ImgContent>
+        <div className="box">
+          <div className="main-photo-ara-wrapper">
+            <div className="main-photo-ara">
+              <div className="overlap">
+                <img className="rectangle" alt="Rectangle" src="\images\Rectangle3.png" />
+                <div className="add-profile">
+                  <img className="add-user" alt="Add user" src="\images\Add user.svg" />
+                </div>
+              </div>
+              <div className="overlap-group">
+                <img className="img" alt="Rectangle" src="\images\Rectangle4.png" />
+                <div className="send-message">
+                  <img className="send" alt="Send" src="\images\Send.svg" />
+                </div>
+              </div>
+
+              <div className="div">
+                <img className="rectangle-2" alt="Rectangle" src="\images\Rectangle5.png" />
+                <div className="top-workers">
+                  <div className="overlap-group-2">
+                    <div className="rec" />
+                    <div className="text-wrapper">Top Contractors</div>
+                    <img className="worker" alt="Worker" src="\images\Worker.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ImgContent>
 
 
 
-        </Container>
-    )
+    </Container>
+  )
 }
 
 export default Main
@@ -179,7 +179,7 @@ const RenovateTag = styled.div`
     .box .mail-button-wrapper {
       height: 60px;
       width: 160px;
-      padding-left: 10px;
+      padding-left: 20px;
     }
 
     .box .mail-button {
@@ -275,7 +275,7 @@ const RenovateText = styled.div`
     font-size: 36px;
     line-height: 50px;
     width: 380px;
-    padding-left: 10px;
+    padding-left: 25px;
   }
 }
 
@@ -331,7 +331,7 @@ const Text = styled.div`.label {
     //position: fixed;
     //top: 0;
     width: 360px;
-    padding-left: 10px;
+    padding-left: 25px;
   }
 
    }
@@ -365,7 +365,7 @@ const GetStarted = styled.div`
     border: 0px none;
     height: 4.711rem;
     overflow-x: hidden;
-    width: 11rem;
+    width: 11.65rem;
     }
 
     .box .get-started-box {
@@ -384,7 +384,7 @@ const GetStarted = styled.div`
     background: linear-gradient(180deg, rgb(29, 3, 71) 0%, rgba(29, 3, 71, 0.75) 77.92%);
     border-radius: 20px;
     height: 4.188rem;
-    width: 10rem;
+    width: 11rem;
     }
 
     .box .text-wrapper {
@@ -412,12 +412,13 @@ const GetStarted = styled.div`
    //justify-content: center;
   }
   .box .overlap-group {
-    padding-left: 5px;
+    //padding-left: 15px;
 
     }
 
   .box .get-started-box-wrapper {
     //width: 100%;
+    padding-left: 25px;
   }
 }
 `

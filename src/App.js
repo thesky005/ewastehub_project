@@ -11,6 +11,8 @@ import SignUp from './components/SignUp';
 import Merchant1 from './components/Merchant1';
 import Verification from './components/Verification';
 import ThankYou from './components/ThankYou';
+import Bussiness from './components/Bussiness';
+import Finanicial from './components/Finanicial'
 
 
 const App = () => {
@@ -30,6 +32,8 @@ const App = () => {
       <Route path="/homear" element={<HomeAr/>}/>
       <Route path="/verification" element={<Verification/>}/>
       <Route path="/thankyou" element={<ThankYou/>}/>
+      <Route path="/bussiness" element={<Bussiness/>}/>
+      <Route path="/finanicial" element={<Finanicial/>}/>
     </Routes>
   </Router>
   );

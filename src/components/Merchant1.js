@@ -1,14 +1,72 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import styled from 'styled-components'
 import Header from './Header'
-
-
+import Finanicial from './Finanicial'
+import { useNavigate } from 'react-router-dom'
 
 const Merchant1 = () => {
-    const [isOpen, setIsOpen] = useState(false);
+
+    const navigate = useNavigate();
+
+    const [selectedValue, setSelectedValue] = useState('');
+    const [company, setCompany] = useState('');
+    const [regNo, setRegNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [mobileNo, setMobileNo] = useState('');
+    const [AuthorizedRepresentative, setAuthorizedRepresentative] = useState('');
+    const [ARNationalID, setARNationalID] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleDropdownChange = (event) => {
+        const value = event.target.value;
+        setSelectedValue(value);
+    };
+    console.log()
+
+    useEffect(() => {
+        function generateRandomPassword(length) {
+          const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          let generatedPassword = '';
+    
+          for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            generatedPassword += charset[randomIndex];
+          }
+    
+          setPassword(generatedPassword);
+        }
+    
+        generateRandomPassword(8);
+      }, []);
+    
+      // Rest of your component code
+
+    const merchantinfo = {
+        company: company,
+        regNo: regNo,
+        email: email,
+        mobileNo: mobileNo,
+        AuthorizedRepresentative: AuthorizedRepresentative,
+        ARNationalID: ARNationalID,
+        selectedValue: selectedValue,
+        password: password
+    }
+
+    const handleSubmit = () => {
+        //navigate('/bussiness')
+        navigate("/bussiness", {
+            state: {
+                merchantinfo: merchantinfo
+            }
+        });
+    };
+
+    const handleCompanyChange = (event) => {
+        setCompany(event.target.value);
+    };
+
 
     return (
-
         <Container>
             <Content>
 
@@ -16,63 +74,69 @@ const Merchant1 = () => {
                     <img src='\images\merchant.jpg'></img>
                 </Img>
                 <Form>
-                    <Heading> <h2>Business Infomation</h2> </Heading>
+                    <Heading> <h2>Merchant Registration</h2> </Heading>
 
                     <FormItem>
                         <Item>
                             <p>Company Name</p>
-                            <input type='text' placeholder='Enter your company name'></input>
+                            <input type='text' placeholder='Enter your company name' value={company}
+                                onChange={handleCompanyChange}></input>
                         </Item>
                         <Item>
                             <p>Company Registration No* </p>
-                            <input type='text' placeholder='Enter your Company Registration'></input>
+                            <input type='text' placeholder='Enter your Company Registration' value={regNo} onChange={(e) => setRegNo(e.target.value)}></input>
                         </Item>
                         <Wrap>
                             <CompType>
-                                <div className="dropdown-container">
+                                <div className="dropdown-container" onChange={handleDropdownChange}>
                                     <p>Company Type* </p>
-                                    {/* <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>Toggle Dropdown</button>
-                                    {isOpen && (
-                                        <select className="dropdown-content">
-                                                <option>Option 1</option>
-                                                <option>Option 2</option>
-                                                <option>Option 3</option>
-                                        </select>
-                                    )} */}
-                                        <select className="dropdown-content">
-                                                <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
-                                                <option className="dropdown-opt">General partnership</option>
-                                                <option className="dropdown-opt">Limited partnership </option>
-                                                <option className="dropdown-opt">Limited Liablity company</option>
-                                                <option className="dropdown-opt"> Joint-stock company</option>
-                                                <option className="dropdown-opt">Simplified joint-stock company</option>
-                                        </select>
+                                    <select className="dropdown-content">
+                                        <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
+                                        <option className="dropdown-opt">General partnership</option>
+                                        <option className="dropdown-opt">Limited partnership </option>
+                                        <option className="dropdown-opt">Limited Liablity company</option>
+                                        <option className="dropdown-opt"> Joint-stock company</option>
+                                        <option className="dropdown-opt">Simplified joint-stock company</option>
+                                    </select>
                                 </div>
                             </CompType>
                             <Item1>
                                 <p>Email Adress*</p>
-                                <input type='text' placeholder='Enter your Email Adress'></input>
+                                <input type='text' placeholder='Enter your Email Adress' value={email}
+                                    onChange={(e) => setEmail(e.target.value)}></input>
                             </Item1>
                         </Wrap>
+                        {/* <Item>
+                            <p>Password*</p>
+                            <input type='password' placeholder='Enter your Password' value={password}
+                                onChange={(e) => setPassword(e.target.value)}></input>
+                        </Item> */}
                         <Item>
                             <p>Mobile No*</p>
-                            <input type='text' placeholder='Enter your Mobile No '></input>
+                            <input type='text' placeholder='Enter your Mobile No ' value={mobileNo}
+                                onChange={(e) => setMobileNo(e.target.value)}></input>
                         </Item>
                         <Item>
                             <p>Authorized Representative</p>
-                            <input type='text' placeholder='Enter your Representative Full Name'></input>
+                            <input type='text' placeholder='Enter your Representative Full Name' value={AuthorizedRepresentative}
+                                onChange={(e) => setAuthorizedRepresentative(e.target.value)}></input>
                         </Item>
                         <Item>
                             <p>Authorized Representative’s National ID*</p>
-                            <input type='text' placeholder='Enter your Authorized Representative’s National ID*'></input>
+                            <input type='text' placeholder='Enter your Authorized Representative’s National ID*' value={ARNationalID}
+                                onChange={(e) => setARNationalID(e.target.value)}></input>
                         </Item>
                     </FormItem>
-                    <SignUpBtn>
-                        <div className="overlap-group">
-                            <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Next</h1>
-                        </div>
+                    <SignUpBtn type='submit' onSubmit={handleSubmit} onClick={handleSubmit} >
+                        <a>
+                            <div className="overlap-group">
+                                <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Next</h1>
+
+                            </div>
+                        </a>
                     </SignUpBtn>
                 </Form>
+
             </Content>
         </Container>
     )
@@ -132,55 +196,19 @@ const CompType = styled.div`
         width: 180px;
         padding: 10px;
     }
-
-
-    /* .dropdown-content {
-  position: relative;
-  display: inline-block;
-
-  select {
-  appearance: none;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px 12px;
-  font-size: 16px;
-  transition: border-color 0.3s ease-in-out;
-  width: 200px;
-  cursor: pointer;
-
-  select:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-}
-
-}
-option {
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-option:hover {
-  background-color: #f5f5f5;
-}
-
-option:checked {
-  background-color: #007bff;
-  color: white;
-}
-} */
-
-    /* .dropdown-container:hover .dropdown-content {
-        opacity: 1;
-        transform: translateY(0);
-    } */
-` 
+`
 
 const Wrap = styled.div`
-    display : flex;
-    align-items: center;
+      display: flex;
+  //flex-direction: column; /* Updated: Stack elements vertically */
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    /* Add styles for mobile view */
+    //align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 const Item1 = styled.div`
 
@@ -259,7 +287,8 @@ const Heading = styled.div`
     width: 642px;
 
     @media screen and (max-width:768px){
-        margin-left: 46px;
+        margin-left: 17px;
+        font-size: 20px;
     }
 
  `
@@ -267,7 +296,7 @@ const FormItem = styled.div`
  
     margin-bottom: 32px;
     @media screen and (max-width:768px){
-        margin-left: 46px;
+        margin-left: 18px;
     }
     
  `
@@ -303,6 +332,21 @@ const Item = styled.div`
         line-height: normal;
         width: 480px;
 }
+
+@media screen and (max-width : 768px){
+    p{
+        font-size: 16px;
+        width: 247px;
+    }
+    input{
+        width: 280px;
+        height: 35px;
+    }
+    input::placeholder {
+        font-size: 14px;
+
+}
+}
 `
 const SignUpBtn = styled.div`
     display: flex;
@@ -310,6 +354,11 @@ const SignUpBtn = styled.div`
     align-items: center;
     position: relative;
     margin: 30px 0px;
+    margin-left: 160px;
+    a{
+        border: none;
+        text-decoration: none;
+    }
     @media screen and (max-width:768px){
         margin-left: 104px;
     }
@@ -321,6 +370,9 @@ const SignUpBtn = styled.div`
         height: 37px;
         position: relative;
         width: 137px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
@@ -331,10 +383,12 @@ const SignUpBtn = styled.div`
         font-weight: 600;
         letter-spacing: 0;
         line-height: normal;
-        width: 117px;
-        height: 11px;
+        //width: 117px;
+        //height: 19px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 28px;
+        //padding-top: 9px;
     }
 `
