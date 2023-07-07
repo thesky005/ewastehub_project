@@ -109,8 +109,27 @@ const Bussiness = () => {
         selectedServicesOffered: selectedServicesOffered,
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         //navigate('/bussiness')
+        e.preventDefault();
+
+        if (
+            bussinessAddress.trim() === '' ||
+            district.trim() === '' ||
+            city.trim() === '' ||
+            selectedPortfolioFile === null ||
+            selectedCertificateFile === null ||
+            selectedCityofOperation.trim() === '' ||
+            selectedYearinBusiness.trim() === '' ||
+            selectedServicesOffered.length === 0
+          ) {
+            // Set an error state or display an error message indicating that all fields are required
+            console.error('Please fill in all the required fields.');
+            alert('Please fill in all the required fields.');
+            return;
+          }
+
+
         navigate("/finanicial", {
             state: {
                 Bussinessinfo: Bussinessinfo
@@ -132,32 +151,32 @@ const Bussiness = () => {
 
                     <FormItem>
                         <Item>
-                            <p>Business Address</p>
-                            <input type='text' placeholder='Enter your company name' value={bussinessAddress}
-                                onChange={(e) => setbussinessAddress(e.target.value)}></input>
+                            <p>Business Address*</p>
+                            <input type='text' placeholder='Enter your company name' value={bussinessAddress} required
+                                onChange={(e) => setbussinessAddress(e.target.value)} ></input>
                         </Item>
                         <Wrap2>
                             <WrapItem>
-                                <p>District</p>
-                                <input type='text' placeholder='Enter your district' value={district}
+                                <p>District*</p>
+                                <input type='text' placeholder='Enter your district' value={district} required
                                     onChange={(e) => setDistrict(e.target.value)}></input>
                             </WrapItem>
                             <WrapItem>
-                                <p>City</p>
-                                <input type='text' placeholder='Enter your city' value={city}
+                                <p>City*</p>
+                                <input type='text' placeholder='Enter your city' value={city} required
                                     onChange={(e) => setCity(e.target.value)}></input>
                             </WrapItem>
                         </Wrap2>
                         <Item>
-                            <p>Reference*</p>
-                            <input type='text' placeholder='Enter your Reference No ' value={refrence}
+                            <p>Reference</p>
+                            <input type='text' placeholder='Enter your Reference' value={refrence}
                                 onChange={(e) => setRefrence(e.target.value)}></input>
                         </Item>
                         <Wrap>
                             <CompType>
-                                <div className="dropdown-container" onChange={handleDropdownChange}>
-                                    <p>City of Operation</p>
-                                    <select className="dropdown-content" >
+                                <div className="dropdown-container" onChange={handleDropdownChange} >
+                                    <p>City of Operation*</p>
+                                    <select className="dropdown-content" required >
                                         <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
                                         <option className="dropdown-opt">Riyadh</option>
                                         <option className="dropdown-opt">Jeddah</option>
@@ -168,9 +187,9 @@ const Bussiness = () => {
                                 </div>
                             </CompType>
                             <CompType>
-                                <div className="dropdown-container" onChange={handleDropdownChange1}>
-                                    <p>Year in Business</p>
-                                    <select className="dropdown-content">
+                                <div className="dropdown-container" onChange={handleDropdownChange1} >
+                                    <p>Year in Business*</p>
+                                    <select className="dropdown-content" required>
                                         <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
                                         <option className="dropdown-opt">Less than 1 year</option>
                                         <option className="dropdown-opt">1-3 years</option>
@@ -181,8 +200,8 @@ const Bussiness = () => {
                             </CompType>
                             <CompType>
                                 <div className="dropdown-container" onChange={handleDropdownChange2}>
-                                    <p>Services Offered</p>
-                                    <select className="dropdown-content">
+                                    <p>Services Offered*</p>
+                                    <select className="dropdown-content" required multiple>
                                         <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
                                         <option className="dropdown-opt">Plumbing</option>
                                         <option className="dropdown-opt">Electrical</option>
@@ -207,27 +226,27 @@ const Bussiness = () => {
                         </Wrap2>
                         <ItemUplod>
                             <Wrap1>
-                                <p>Past Portfolio</p>
+                                <p>Past Portfolio*</p>
                                 <div className="upload-btn-wrapper">
                                     <button className={`btn ${selectedPortfolioFile ? 'uploaded' : ''}`}>
                                         {selectedPortfolioFile ? 'Uploaded' : 'Upload a file'}
                                     </button>
-                                    <input type="file" name="myfile" onChange={handleFileChange} />
+                                    <input type="file" name="myfile" onChange={handleFileChange} required/>
                                 </div>
                             </Wrap1>
                             <Wrap1>
-                                <p>Professional Certificate</p>
+                                <p>Professional Certificate*</p>
                                 <div className="upload-btn-wrapper">
                                     <button className={`btn ${selectedCertificateFile ? 'uploaded' : ''}`}>
                                         {selectedCertificateFile ? 'Uploaded' : 'Upload a file'}
                                     </button>
-                                    <input type="file" name="myfile" onChange={handleFileChange1} />
+                                    <input type="file" name="myfile" onChange={handleFileChange1} required />
                                 </div>
                             </Wrap1>
                         </ItemUplod>
 
                     </FormItem>
-                    <SignUpBtn onSubmit={handleSubmit} onClick={handleSubmit}>
+                    <SignUpBtn onSubmit={handleSubmit} onClick={handleSubmit} type='submit'>
                         <a>
                             <div className="overlap-group">
                                 <h1 className="sign-up">&nbsp;&nbsp;&nbsp;&nbsp; Next</h1>
@@ -276,8 +295,9 @@ const CompType = styled.div`
         //border: none;
         font-family: "Inter-Regular", Helvetica;
         height: 39px;
-        width: 240px;
+        width: 168px;
         padding: 10px;
+        //overflow-y: hidden;
     } 
     .dropdown-opt{
         background-color: #f5f5f5;
@@ -293,6 +313,12 @@ const CompType = styled.div`
         width: 120px;
         padding: 10px;
     }
+    @media screen and (max-width: 768px) {
+        .dropdown-content {
+        width: 240px;
+
+    } 
+  }
 `
 
 const Wrap = styled.div`
@@ -464,6 +490,7 @@ const SignUpBtn = styled.div`
     position: relative;
     margin: 30px 0px;
     margin-left: 160px;
+    cursor: pointer;
     a{
         border: none;
         text-decoration: none;

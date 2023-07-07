@@ -104,11 +104,11 @@ const Main = () => {
 export default Main
 const Container = styled.div`
   display: flex;
-  align-items: flex-start;
-  margin: 100px 170px;
-  min-height: 600px;
+  align-items: center;
+  margin: 30px 170px;
+  min-height: 500px;
   //background-color: aliceblue;
-  //justify-content: center;
+  justify-content: space-around;
   @media screen and (max-width : 768px) {
     margin: 7px 18px ;
     //max-width : 100px;
@@ -117,7 +117,8 @@ const Container = styled.div`
   }
 `
 const TextContent = styled.div`
-
+    margin: 0 100px;
+    padding-left: 110px;
 `
 const RenovateTag = styled.div`
     .box {
@@ -483,16 +484,18 @@ const FindContractor = styled.div`
 `
 
 const ImgContent = styled.div`
-    position: absolute;
-    top: 100px;
-    left: 880px;
-    margin-bottom: 80px;
+    position: relative;
+    /* top: 100px;
+    left: 880px; */
+    //margin-bottom: 80px;
+    
     .box {
   background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -502,7 +505,7 @@ const ImgContent = styled.div`
 
 .box .main-photo-ara-wrapper {
   border: 0px none;
-  height: 726px;
+  height: 626px;
   position: relative;
   width: 672px;
   margin-bottom: 50px;
@@ -525,65 +528,65 @@ const ImgContent = styled.div`
 }
 
 .box .rectangle {
-  height: 355px;
+  height: 305px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 250px;
+  //width: 210px;
 }
 
 .box .add-profile {
   background-color: #efc14c;
   border-radius: 41.89px/38.54px;
-  height: 77px;
-  left: 210px;
+  height: 60px;
+  left: 180px;
   position: absolute;
-  top: 82px;
-  width: 84px;
+  top: 42px;
+  width: 64px;
 }
 
 .box .add-user {
-  height: 40px;
-  left: 22px;
+  height: 30px;
+  left: 18px;
   object-fit: cover;
   position: absolute;
-  top: 19px;
-  width: 40px;
+  top: 14px;
+ // width: 40px;
 }
 
 .box .overlap-group {
   height: 494px;
-  left: 0;
+  left: 7px;
   position: absolute;
   top: 115px;
   width: 188px;
 }
 
 .box .img {
-  height: 448px;
+  height: 408px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 182px;
+  //width: 182px;
 }
 
 .box .send-message {
   background-color: #16c89e;
   border-radius: 44.02px/40.5px;
-  height: 81px;
-  left: 100px;
+  height: 71px;
+  left: 120px;
   position: absolute;
-  top: 413px;
-  width: 88px;
+  top: 363px;
+  width: 72px;
 }
 
 .box .send {
-  height: 43px;
+  height: 33px;
   left: 19px;
   object-fit: cover;
   position: absolute;
   top: 22px;
-  width: 43px;
+  width: 33px;
 }
 
 .box .div {
@@ -595,18 +598,18 @@ const ImgContent = styled.div`
 }
 
 .box .rectangle-2 {
-  height: 324px;
+  height: 305px;
   left: 0;
   position: relative;
-  top: 0;
-  width: 250px;
+  bottom: 48px;
+  width: 220px;
 }
 
 .box .top-workers {
-  height: 88px;
+  //height: 88px;
   left: 155px;
   position: absolute;
-  top: 259px;
+  top: 160px;
   width: 315px;
 }
 
@@ -621,16 +624,16 @@ const ImgContent = styled.div`
   background-color:rgb(255, 255, 255) ;
   border-radius: 20px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 80px;
+  height: 70px;
   /* left: 0;
   position: absolute;
   top: 0; */
-  width: 216px;
+  width: 175px;
 }
 .box .text-wrapper {
   color: #000000;
   font-family: "Inter-SemiBold", Helvetica;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   left: 51px;
   letter-spacing: 0;
@@ -641,11 +644,11 @@ const ImgContent = styled.div`
 }
 
 .box .worker {
-  height: 45px;
+  //height: 45px;
   left: 8px;
   object-fit: cover;
   position: absolute;
   top: 17px;
-  width: 45px;
+  width: 32px;
 }
 `

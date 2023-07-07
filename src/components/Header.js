@@ -164,7 +164,7 @@ const NavMenu = styled.div`
     cursor: pointer;
     color: #4B4B4B;
     font-size: 18px;
-    font-family: Inter;
+    font-family: 'Inter';
     font-weight: 600;
     color : #4B4B4B;
     letter-spacing: 2px;

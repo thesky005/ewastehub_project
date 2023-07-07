@@ -69,6 +69,21 @@ const SignUp = () => {
     const handleRegistration = (e) => {
         e.preventDefault();
 
+        if (
+            nationalId.trim() === '' ||
+            mobile.trim() === '' ||
+            dateOfBirth.trim() === '' ||
+            email.trim() === '' ||
+            firstName.trim() === '' ||
+            lastName.trim() === '' ||
+            password.trim() === ''
+          ) {
+            // Set an error state or display an error message indicating that all fields are required
+            console.error('Please fill in all the required fields.');
+            alert('Please fill in all the required fields.');
+            return;
+          }
+
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((userCredential) => {
@@ -117,43 +132,43 @@ const SignUp = () => {
                     <img src='\images\sigupimg.png'></img>
                 </Img>
                 <Form >
-                    <Heading> <h2>Costumer Registration</h2> </Heading>
+                    <Heading> <h2>Coustumer Registration</h2> </Heading>
 
                     <FormItem>
                         <Item>
                             <p>National ID /Iqama*</p>
-                            <input type='text' placeholder='Enter your National ID /Iqama' value={nationalId}
-                                onChange={(e) => setNationalId(e.target.value)}></input>
+                            <input type='number' placeholder='Enter your National ID /Iqama' value={nationalId}
+                                onChange={(e) => setNationalId(e.target.value)} required></input>
                         </Item>
                         <Item>
                             <p>Mobile No*</p>
-                            <input type='text' placeholder='Enter your Mobile No ' value={mobile}
-                                onChange={(e) => setMobile(e.target.value)}></input>
+                            <input type='number' placeholder='Enter your Mobile No ' value={mobile}
+                                onChange={(e) => setMobile(e.target.value)} required max={10}></input>
                         </Item>
                         <Item>
                             <p>Date of birtrh</p>
-                            <input type='text' placeholder='dd-mm-yyyy' value={dateOfBirth}
+                            <input type='number' placeholder='dd-mm-yyyy' value={dateOfBirth}
                                 onChange={(e) => setDateOfBirth(e.target.value)}></input>
                         </Item>
                         <Item>
                             <p>Email Adress*</p>
-                            <input type='text' placeholder='Enter your Email Adress' value={email}
-                                onChange={(e) => setEmail(e.target.value)}></input>
+                            <input type='email' placeholder='Enter your Email Adress' value={email}
+                                onChange={(e) => setEmail(e.target.value)} required></input>
                         </Item>
                         <Item>
-                            <p>First Name</p>
+                            <p>First Name*</p>
                             <input type='text' placeholder='Enter your First Name' value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}></input>
+                                onChange={(e) => setFirstName(e.target.value)} required></input>
                         </Item>
                         <Item>
                             <p>Last Name</p>
                             <input type='text' placeholder='Enter your Last Name' value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}></input>
+                                onChange={(e) => setLastName(e.target.value)} required></input>
                         </Item>
                         <Item>
                             <p>Password*</p>
                             <input type='password' placeholder='Enter your Password' value={password}
-                                onChange={(e) => setPassword(e.target.value)}></input>
+                                onChange={(e) => setPassword(e.target.value)} required></input>
                         </Item>
                     </FormItem>
 
@@ -161,7 +176,7 @@ const SignUp = () => {
                         <div className="block">
                             <div className="termnCond" >
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} />
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required />
                                     <label htmlFor="tickBox" ></label>
                                 </div>
                                 <p className="i-m-over-years">
@@ -173,7 +188,7 @@ const SignUp = () => {
                             </div>
                             <div className='privacy'>
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} />
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required/>
                                     <label htmlFor="tickBox"></label>
                                 </div>
                                 <p className="i-agree-to-privacy">
@@ -321,7 +336,7 @@ const Item = styled.div`
         font-weight: 400;
         letter-spacing: 0;
         line-height: normal;
-        width: 200px;
+        //width: 200px;
 }
 
 @media screen and (max-width : 768px){
@@ -445,4 +460,7 @@ const Term = styled.div`
 `
 const Merchant = styled.div`
     margin-left: 39px;
+    a{
+        cursor: pointer;
+    }
 `

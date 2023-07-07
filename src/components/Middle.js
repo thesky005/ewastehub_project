@@ -17,32 +17,33 @@ const Middle = () => {
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\Group.svg'></img>
+            <p>Transparent Communication</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\Quality control.svg'></img>
+            <p>Quality Assurance</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\Operator.svg'></img>
+            <p>Assistance in Bid Comparison</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\Workers.svg'></img>
+            <p>Contractor Accountability
+</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\Payment method.svg'></img>
+            <p>Secure Payment System</p>
           </Wrap>
         </ContentItem>
       </Content>
@@ -67,19 +68,19 @@ const Middle = () => {
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Presentation.svg'></img>
+                <img src='\images\Worker2.svg'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
                   <p>2</p>
                 </Wrap1>
               </Wrap0>
-              <Wrap2> <p>Post Your Project</p>  </Wrap2>
-              <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+              <Wrap2> <p>Connect with Chosen Contractors</p>  </Wrap2>
+              <Wrap3>Review the shortlisted contractors and choose the ones you would like to connect with.</Wrap3>
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Presentation.svg'></img>
+                <img src='\images\Bid.svg'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
@@ -87,23 +88,23 @@ const Middle = () => {
                 </Wrap1>
               </Wrap0>
               <Wrap0>
-                <Wrap2> <p>Post Your Project</p>  </Wrap2>
+                <Wrap2> <p>Get Competitive Bids</p>  </Wrap2>
               </Wrap0>
               <Wrap0>
-                <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+                <Wrap3>Reach out to the chosen contractors and share your project details with them.</Wrap3>
               </Wrap0>
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Presentation.svg'></img>
+                <img src='\images\Cashless payment.svg'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
                   <p>4</p>
                 </Wrap1>
               </Wrap0>
-              <Wrap2> <p>Post Your Project</p>  </Wrap2>
-              <Wrap3>Start by posting your project details and requirements on the app.</Wrap3>
+              <Wrap2> <p>Secure Payments and Renovation Support</p>  </Wrap2>
+              <Wrap3>Provides a trusted and reliable platform for users to make payments to contractors.</Wrap3>
             </ImgLineWrap>
           </div>
         </ImgLine>
@@ -240,7 +241,7 @@ const Wrap = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 24px;
+      margin-left: 32px;
       padding-bottom: 36px;
     }
     p{
@@ -258,8 +259,8 @@ const Wrap = styled.div`
     }
     @media screen and (max-width:768px){
       img{
-        width: 64px;
-        height: 64px;
+        width: 60px;
+        height: 60px;
         //flex-shrink: 2;
         margin-left: 44px;
         padding-bottom: 14px;
@@ -397,6 +398,7 @@ const Wrap2 = styled.div`
       width: 165px;
       height: 60px;
       //padding: 10px 0;
+      padding-bottom:60px;
   }
 `
 const Wrap3 = styled.div`
@@ -407,6 +409,9 @@ const Wrap3 = styled.div`
   font-size: 20px;
   font-family: Inter;
   font-weight: 500;
+  //justify-content: center;
+  text-align: justify;
+  //padding-left: 10px;
 `
 const ImgLineWrap = styled.div`
 

@@ -6,6 +6,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 import 'firebase/storage'
+import { radioClasses } from '@mui/material';
 
 
 
@@ -61,7 +62,7 @@ const Finanicial = (props) => {
         const downloadURL = handleFileUpload(file);
         console.log('File uploaded and download URL stored in setSelectedPortfolioFile.');
         console.log("URL",downloadURL)
-        setselectedFinancialStatementsFile(downloadURL)
+        downloadURL.then((data => setselectedFinancialStatementsFile(data)))
 
     };
 
@@ -103,6 +104,20 @@ const Finanicial = (props) => {
     const handleRegistration = (e) => {
         e.preventDefault();
 
+        if (
+            BankName.trim() === '' ||
+            AccountHoldersName.trim() === '' ||
+            AccountNumber.trim() === '' ||
+            IBANNumber.trim() === '' ||
+            TaxIdentificationNo.trim() === '' ||
+           selectedFinancialStatementsFile === null
+          ) {
+            // Set an error state or display an error message indicating that all fields are required
+            console.error('Please fill in all the required fields.');
+            alert('Please fill in all the required fields.');
+            return;
+          }
+
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((userCredential) => {
@@ -126,7 +141,7 @@ const Finanicial = (props) => {
                     Companytype,
                     ARNationalID,
                     AuthorizedRepresentative,
-                    bussinessAddress, district, city, Website, refrence, selectedCityofOperation, selectedServicesOffered, selectedYearinBusiness, selectedPortfolioFile, selectedCertificateFile, SocialMediaProfile
+                    bussinessAddress, district, city, Website, refrence, selectedCityofOperation, selectedServicesOffered, selectedYearinBusiness, selectedPortfolioFile, selectedCertificateFile, SocialMediaProfile,selectedFinancialStatementsFile
                 });
 
                 // user.sendEmailVerification().then(() => {
@@ -170,25 +185,25 @@ const Finanicial = (props) => {
 
                     <FormItem>
                         <Item>
-                            <p>Bank Name</p>
+                            <p>Bank Name*</p>
                             <input type='text' placeholder='Enter Bank Name' value={BankName}
-                                onChange={(e) => setBankName(e.target.value)}></input>
+                                onChange={(e) => setBankName(e.target.value)} required></input>
                         </Item>
                         <Item>
-                            <p>Account Holders Name</p>
+                            <p>Account Holders Name*</p>
                             <input type='text' placeholder='Enter Account Holders Full Name' value={AccountHoldersName}
-                                onChange={(e) => setAccountHoldersName(e.target.value)}></input>
+                                onChange={(e) => setAccountHoldersName(e.target.value)} required></input>
                         </Item>
                         <Wrap2>
                             <WrapItem>
-                                <p>Account Number</p>
-                                <input type='text' placeholder='Enter Account Number ' value={AccountNumber}
-                                    onChange={(e) => setAccountNumber(e.target.value)}></input>
+                                <p>Account Number*</p>
+                                <input type='number' placeholder='Enter Account Number ' value={AccountNumber}
+                                    onChange={(e) => setAccountNumber(e.target.value)} required></input>
                             </WrapItem>
                             <WrapItem>
-                                <p>IBAN Number</p>
-                                <input type='text' placeholder='Enter IBAN Number' value={IBANNumber}
-                                    onChange={(e) => setIBANNumber(e.target.value)}></input>
+                                <p>IBAN Number*</p>
+                                <input type='number' placeholder='Enter IBAN Number' value={IBANNumber}
+                                    onChange={(e) => setIBANNumber(e.target.value)}required></input>
                             </WrapItem>
                         </Wrap2>
                         <Item>
@@ -212,18 +227,18 @@ const Finanicial = (props) => {
                         <WholeWrap>
                             <ItemUplod>
                                 <Wrap1>
-                                    <p>Financial Statements</p>
+                                    <p>Financial Statements*</p>
                                     <div className="upload-btn-wrapper">
                                         <button className={`btn ${selectedFinancialStatementsFile ? 'uploaded' : ''}`}>
                                             {selectedFinancialStatementsFile ? 'Uploaded' : 'Upload a file'}
                                         </button>
-                                        <input type="file" name="myfile" onChange={handleFileChange} />
+                                        <input type="file" name="myfile" required onChange={handleFileChange} />
                                     </div>
                                 </Wrap1>
                                 <WrapItem>
                                     <p>Tax Identification No*</p>
-                                    <input type='text' placeholder='Enter Tax Identification No ' value={TaxIdentificationNo}
-                                        onChange={(e) => setTaxIdentificationNo(e.target.value)}></input>
+                                    <input type='number' placeholder='Enter Tax Identification No ' value={TaxIdentificationNo}
+                                        onChange={(e) => setTaxIdentificationNo(e.target.value)} required></input>
                                 </WrapItem>
                             </ItemUplod>
 
@@ -555,3 +570,5 @@ const WholeWrap = styled.div`
         display: table;
     }
 `
+
+

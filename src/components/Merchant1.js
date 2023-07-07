@@ -54,6 +54,22 @@ const Merchant1 = () => {
 
     const handleSubmit = () => {
         //navigate('/bussiness')
+
+        if (
+            company.trim() === '' ||
+            regNo.trim() === '' ||
+            email.trim() === '' ||
+            mobileNo.trim() === '' ||
+            AuthorizedRepresentative.trim() === '' ||
+            ARNationalID.trim() === '' ||
+            selectedValue.trim() === ''
+          ) {
+            // Set an error state or display an error message indicating that all fields are required
+            console.error('Please fill in all the required fields.');
+            alert('Please fill in all the required fields.');
+            return;
+          }
+
         navigate("/bussiness", {
             state: {
                 merchantinfo: merchantinfo
@@ -78,13 +94,13 @@ const Merchant1 = () => {
 
                     <FormItem>
                         <Item>
-                            <p>Company Name</p>
+                            <p>Company Name*</p>
                             <input type='text' placeholder='Enter your company name' value={company}
                                 onChange={handleCompanyChange}></input>
                         </Item>
                         <Item>
                             <p>Company Registration No* </p>
-                            <input type='text' placeholder='Enter your Company Registration' value={regNo} onChange={(e) => setRegNo(e.target.value)}></input>
+                            <input type='number' placeholder='Enter your Company Registration' value={regNo} onChange={(e) => setRegNo(e.target.value)} required></input>
                         </Item>
                         <Wrap>
                             <CompType>
@@ -102,8 +118,8 @@ const Merchant1 = () => {
                             </CompType>
                             <Item1>
                                 <p>Email Adress*</p>
-                                <input type='text' placeholder='Enter your Email Adress' value={email}
-                                    onChange={(e) => setEmail(e.target.value)}></input>
+                                <input type='email' placeholder='Enter your Email Adress' value={email}
+                                    onChange={(e) => setEmail(e.target.value)} required></input>
                             </Item1>
                         </Wrap>
                         {/* <Item>
@@ -113,18 +129,18 @@ const Merchant1 = () => {
                         </Item> */}
                         <Item>
                             <p>Mobile No*</p>
-                            <input type='text' placeholder='Enter your Mobile No ' value={mobileNo}
-                                onChange={(e) => setMobileNo(e.target.value)}></input>
+                            <input type='number' placeholder='Enter your Mobile No ' value={mobileNo}
+                                onChange={(e) => setMobileNo(e.target.value)} required></input>
                         </Item>
                         <Item>
-                            <p>Authorized Representative</p>
+                            <p>Authorized Representative*</p>
                             <input type='text' placeholder='Enter your Representative Full Name' value={AuthorizedRepresentative}
-                                onChange={(e) => setAuthorizedRepresentative(e.target.value)}></input>
+                                onChange={(e) => setAuthorizedRepresentative(e.target.value)} required></input>
                         </Item>
                         <Item>
                             <p>Authorized Representative’s National ID*</p>
-                            <input type='text' placeholder='Enter your Authorized Representative’s National ID*' value={ARNationalID}
-                                onChange={(e) => setARNationalID(e.target.value)}></input>
+                            <input type='number' placeholder='Enter your Authorized Representative’s National ID*' value={ARNationalID}
+                                onChange={(e) => setARNationalID(e.target.value)} max={10} required></input>
                         </Item>
                     </FormItem>
                     <SignUpBtn type='submit' onSubmit={handleSubmit} onClick={handleSubmit} >
@@ -355,6 +371,7 @@ const SignUpBtn = styled.div`
     position: relative;
     margin: 30px 0px;
     margin-left: 160px;
+    cursor: pointer;
     a{
         border: none;
         text-decoration: none;
