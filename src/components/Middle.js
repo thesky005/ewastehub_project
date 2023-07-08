@@ -139,10 +139,12 @@ const Middle = () => {
               {/* <img className="ph-arrow-up" alt="Ph arrow up" src="ph-arrow-up.png" /> */}
               <div className="div1">RENO for business</div>
             </div>
+           
           </div>
           </a>
 
         </div>
+        <div className="emptyspace"><p></p></div>
         <img className="rectangle" alt="Rectangle" src="\images\person.png" />
       </Section>
     </Container>
@@ -454,7 +456,9 @@ padding-top:5.625rem ;
   font-size:12px;
   padding-top:2.625rem;
 }
-
+.emptyspace{
+  padding-top: 20px;
+}
 .reno-for-shoppers {
   height: 20.1875rem;
   width: 68.9375rem;

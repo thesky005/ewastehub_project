@@ -358,7 +358,7 @@ const GetStarted = styled.div`
 `
 const FindContractor = styled.div`
 
-
+  opacity: 0;
 
     .box {
     background-color: transparent;

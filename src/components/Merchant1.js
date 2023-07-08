@@ -17,6 +17,9 @@ const Merchant1 = () => {
     const [ARNationalID, setARNationalID] = useState('');
     const [password, setPassword] = useState('');
 
+    let emailTimeout = null;
+        const [isEmailValid, setIsEmailValid] = useState(false);
+
     const handleDropdownChange = (event) => {
         const value = event.target.value;
         setSelectedValue(value);
@@ -55,6 +58,7 @@ const Merchant1 = () => {
     const handleSubmit = () => {
         //navigate('/bussiness')
 
+
         if (
             company.trim() === '' ||
             regNo.trim() === '' ||
@@ -70,11 +74,36 @@ const Merchant1 = () => {
             return;
           }
 
-        navigate("/bussiness", {
-            state: {
-                merchantinfo: merchantinfo
-            }
-        });
+          const enteredEmail = email;
+          clearTimeout(emailTimeout);
+          emailTimeout = setTimeout(() => {
+            validateEmail(enteredEmail);
+          }, 500); // Adjust the delay as needed (in milliseconds)
+        
+        const validateEmail = (email) => {
+          if (email !== '' && !isValidEmail(email)) {
+            alert('The email address is badly formatted.');
+            
+            setEmail('');
+            return;
+            
+          } else {
+            setIsEmailValid(true);
+            navigate("/bussiness", {
+                state: {
+                    merchantinfo: merchantinfo
+                }
+            });
+          }
+        };
+        
+        const isValidEmail = (email) => {
+          // Use a regular expression to validate email format
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        };
+
+       
     };
 
     const handleCompanyChange = (event) => {
@@ -212,6 +241,12 @@ const CompType = styled.div`
         width: 180px;
         padding: 10px;
     }
+    @media screen and (max-width: 768px) {
+        .dropdown-content {
+        width: 315px;
+
+    } 
+}
 `
 
 const Wrap = styled.div`
@@ -380,6 +415,7 @@ const SignUpBtn = styled.div`
     }
     @media screen and (max-width:768px){
         margin-left: 104px;
+        padding-bottom: 30px;
     }
     
     .overlap-group {

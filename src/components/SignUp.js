@@ -7,6 +7,7 @@ import 'firebase/firestore';
 //import  auth  from '../firebase';
 import firebaseApp from '../firebase'
 import { useNavigate } from 'react-router-dom';
+import { type } from '@testing-library/user-event/dist/type';
 
 
 
@@ -66,6 +67,37 @@ const SignUp = () => {
         };
     */
 
+
+        let emailTimeout = null;
+        const [isEmailValid, setIsEmailValid] = useState(false);
+        
+      /*  const handlesetEmail = (e) => {
+            const enteredEmail = setEmail();
+            clearTimeout(emailTimeout);
+            emailTimeout = setTimeout(() => {
+              validateEmail(enteredEmail);
+            }); // Adjust the delay as needed (in milliseconds)
+          };
+          
+          const validateEmail = (email) => {
+            if (email !== '' && !isValidEmail(email)) {
+              alert('The email address is badly formatted.');
+              
+              setEmail('');
+              return;
+              
+            } else {
+              setIsEmailValid(true);
+            }
+          };
+          
+          const isValidEmail = (email) => {
+            // Use a regular expression to validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+          };*/
+
+      
     const handleRegistration = (e) => {
         e.preventDefault();
 
@@ -83,6 +115,30 @@ const SignUp = () => {
             alert('Please fill in all the required fields.');
           }
 
+        const enteredEmail = email;
+          clearTimeout(emailTimeout);
+          emailTimeout = setTimeout(() => {
+            validateEmail(enteredEmail);
+          }, 500); // Adjust the delay as needed (in milliseconds)
+        
+        const validateEmail = (email) => {
+          if (email !== '' && !isValidEmail(email)) {
+            alert('The email address is badly formatted.');
+            
+            setEmail('');
+            return;
+            
+          } else {
+            setIsEmailValid(true);
+          }
+        };
+        
+        const isValidEmail = (email) => {
+          // Use a regular expression to validate email format
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        };
+
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((userCredential) => {
@@ -97,6 +153,7 @@ const SignUp = () => {
                     firstName,
                     lastName,
                 });
+                console.log("Daata add")
 
                 // user.sendEmailVerification().then(() => {
                 //     // Navigate to the verification page after sending the verification email
@@ -137,7 +194,7 @@ const SignUp = () => {
                         <Item>
                             <p>National ID /Iqama*</p>
                             <input type='number' placeholder='Enter your National ID /Iqama' value={nationalId}
-                                onChange={(e) => setNationalId(e.target.value)} required></input>
+                                onChange={(e) => setNationalId(e.target.value)} required min={10} max={10}></input>
                         </Item>
                         <Item>
                              <p>Mobile No*</p>
@@ -145,7 +202,7 @@ const SignUp = () => {
                             <div className='Left'>+996</div>
                             <div className='Right'>
                             <input type='number' placeholder='Enter your Mobile No ' value={mobile}
-                                onChange={(e) => setMobile(e.target.value)} required max={10}></input>
+                                onChange={(e) => setMobile(e.target.value)} required min={9} max={9}></input>
                             </div>
                             </div>
                         </Item>
@@ -157,12 +214,12 @@ const SignUp = () => {
                         <Item>
                             <p>Email Adress*</p>
                             <input type='email' placeholder='Enter your Email Adress' value={email}
-                                onChange={(e) => setEmail(e.target.value)} required></input>
+                                onChange={(e) => setEmail(e.target.value)}  required></input>
                         </Item>
                         <Item>
                             <p>First Name*</p>
                             <input type='text' placeholder='Enter your First Name' value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)} required></input>
+                                onChange={(e) => setFirstName(e.target.value)}  disabled={!isEmailValid} required></input>
                         </Item>
                         <Item>
                             <p>Last Name</p>
@@ -180,7 +237,7 @@ const SignUp = () => {
                         <div className="block">
                             <div className="termnCond" >
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} />
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required />
                                     <label htmlFor="tickBox" ></label>
                                 </div>
                                 <p className="i-m-over-years">
@@ -192,7 +249,7 @@ const SignUp = () => {
                             </div>
                             <div className='privacy'>
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle}/>
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required/>
                                     <label htmlFor="tickBox"></label>
                                 </div>
                                 <p className="i-agree-to-privacy">
@@ -501,7 +558,7 @@ const Term = styled.div`
 `
 const Merchant = styled.div`
     margin-left: 39px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     a{
         cursor: pointer;
     }

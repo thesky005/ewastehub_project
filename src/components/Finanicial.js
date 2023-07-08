@@ -166,6 +166,7 @@ const Finanicial = (props) => {
             })
             .catch((error) => {
                 console.error('Registration failed:', error);
+                alert(error.message)
             });
     };
     return (
@@ -439,12 +440,14 @@ const SignUpBtn = styled.div`
     position: relative;
     margin: 30px 0px;
     margin-left: 160px;
+    cursor: pointer;
     a{
         border: none;
         text-decoration: none;
     }
     @media screen and (max-width:768px){
         margin-left: 72px;
+        padding-bottom: 60px;
     }
     
     .overlap-group {

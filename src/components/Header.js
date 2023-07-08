@@ -83,9 +83,9 @@ const Header = () => {
               <span onClick={() => handleOptionClick('Categories')}>Categories</span>
               <hr />
               <span onClick={() => handleOptionClick('Sign Up')}>Sign Up</span>
-              <hr />
-              <span onClick={() => handleOptionClick('Get App')}>Get App</span>
-              <hr />
+              {/* <hr /> */}
+              {/* <span onClick={() => handleOptionClick('Get App')}>Get App</span>
+              <hr /> */}
             </DropDown>
 
           )}
@@ -158,10 +158,10 @@ const NavMenu = styled.div`
     cursor: pointer;
     color: #4B4B4B;
     font-size: 18px;
-    font-family: 'Inter';
+    font-family: "Inter-Medium",Helvetica;
     font-weight: 600;
     color : #4B4B4B;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
 
   }
   @media screen and (max-width: 768px) {
@@ -197,6 +197,7 @@ const Button1 = styled.div`
 `
 const LangToggel = styled.div`
 justify-content: flex-end;
+opacity: 0;
 img{
   
   min-width: 32px;
@@ -218,6 +219,7 @@ const Button = styled.div`
     border: 0.2px solid #BDBDBD;
     border-radius: 20px;
     margin-right: 20px;
+    opacity: 0;
     p {
         padding-bottom: 4px;
         margin: 5px;

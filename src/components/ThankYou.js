@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 const ThankYou = () => {
+  
   return (
     <Container>
       <Wrap>
@@ -44,7 +47,7 @@ flex-direction: column;
 flex-shrink: 0;
 color: #000;
 font-size: 45px;
-font-family: Inter;
+font-family:"Inter-SemiBold", Helvetica ;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -56,7 +59,7 @@ padding-left: 30px;
 p{
   color: #000;
 font-size: 25px;
-font-family: Inter;
+font-family: "Inter-SemiBold", Helvetica;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -67,6 +70,23 @@ flex-shrink: 0;
 display: flex;
 justify-content: center;
 //margin-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  img{
+width: 220px;
+height: 220px;
+//padding-bottom: 0px;
+padding-left: 80px;
+
+}
+span{
+  font-size: 35px;
+}
+p{
+font-size: 20px;
+padding-left: 28px;
+}
 }
 
 `

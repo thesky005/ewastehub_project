@@ -490,7 +490,8 @@ const SignUpBtn = styled.div`
         text-decoration: none;
     }
     @media screen and (max-width:768px){
-        margin-left: 84px;
+        margin-left: 74px;
+        padding-bottom: 30px;
     }
     
     .overlap-group {
