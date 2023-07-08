@@ -175,7 +175,7 @@ const Finanicial = (props) => {
 
 
                 <Img>
-                    <img src='\images\merchant.jpg'></img>
+                    <img src='\images\finInfo.png'></img>
                 </Img>
                 <Form>
                     <Heading> <h2>Financial Documentation</h2>
@@ -202,8 +202,8 @@ const Finanicial = (props) => {
                             </WrapItem>
                             <WrapItem>
                                 <p>IBAN Number*</p>
-                                <input type='number' placeholder='Enter IBAN Number' value={IBANNumber}
-                                    onChange={(e) => setIBANNumber(e.target.value)}required></input>
+                                <input type='text' placeholder='Enter IBAN Number' value={IBANNumber}
+                                    onChange={(e) => setIBANNumber(e.target.value)} required></input>
                             </WrapItem>
                         </Wrap2>
                         <Item>
@@ -331,7 +331,7 @@ const Item1 = styled.div`
 const Content = styled.div`
     display: flex;
     width: 662px;
-    height: 1104px;
+    height: 854px;
     @media screen and (max-width:768px){
         padding-left: 15px;
     }
@@ -347,8 +347,9 @@ const Img = styled.div`
     }
     img{
        width: 662px;
-       height: 1104px;
+       height: 854px;
        flex-shrink: 0;
+       opacity: 60%;
     }
     
  `

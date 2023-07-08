@@ -18,26 +18,22 @@ const Main = () => {
           </div>
         </RenovateTag>
         <RenovateText>
-          <div className="label">
-            <div className="renovate-your-home-wrapper">
-              <h1 className="renovate-your-home">
-                <span className="text-wrapper">Renovate your home with</span>
-                <span className="span">&nbsp;</span>
-                <span className="text-wrapper-2">RENO</span>
-                <span className="text-wrapper-3">&nbsp;</span>
+
+
+              <h1>
+                <span>Renovate your home with RENO</span>
               </h1>
-            </div>
-          </div>
+          
+
         </RenovateText>
         <Text>
-          <div className="label">
-            <div className="p-wrapper">
-              <p className="text-wrapper">We help you find the best contractor for your home renovation</p>
-            </div>
-          </div>
+
+              <p>We help you find the best contractor for your home renovation</p>
+        
         </Text>
         <Button>
           <GetStarted>
+            <a href='merchant'>
             <div className="box">
               <div className="get-started-box-wrapper">
                 <div className="get-started-box">
@@ -48,6 +44,7 @@ const Main = () => {
                 </div>
               </div>
             </div>
+            </a>
           </GetStarted>
           <FindContractor>
             <div className="box">
@@ -105,22 +102,23 @@ export default Main
 const Container = styled.div`
   display: flex;
   align-items: center;
-  margin: 30px 170px;
+  margin: 1.875rem 10.625rem;
   min-height: 500px;
   //background-color: aliceblue;
   justify-content: space-around;
   @media screen and (max-width : 768px) {
-    margin: 7px 18px ;
+     margin: 6% 6%;
     //max-width : 100px;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    justify-content: flex-start;
+    //font-size: 50%;
   }
 `
 const TextContent = styled.div`
-    margin: 0 100px;
-    padding-left: 110px;
+    
 `
 const RenovateTag = styled.div`
+  //padding-bottom: 100px;
     .box {
   background-color: transparent;
   display: flex;
@@ -178,13 +176,14 @@ const RenovateTag = styled.div`
     }
 
     .box .mail-button-wrapper {
-      height: 60px;
-      width: 160px;
-      padding-left: 20px;
+     // justify-content: flex-start;
+      height: 70%;
+      width: 80%;
+      //padding-left: auto;
     }
 
     .box .mail-button {
-      height: 60px;
+      height: 70%;
       width: 160px;
     }
 
@@ -192,110 +191,59 @@ const RenovateTag = styled.div`
       height: 44px;
       position: relative;
       width: 160px;
-      align-items: center;
+      align-items: center; 
 
     }
 
     .box .text-wrapper {
       font-size: 12px;
-      //margin-top: 10px;
+      margin-top: 10px;
       align-items: center;
       padding-left: 15px;
-      //flex-wrap: wrap;
+      flex-wrap: wrap;
     }
 
     .box .vector {
-      height: 18px;
+      height: 17px;
       width: 15px;
       align-items: center;
       padding-right: 15px;
+      padding-top: 10px;
+      padding-left: 6px;
+      
     }
      /* Adjust the styling for mobile view  */
   }
 `
 const RenovateText = styled.div`
     margin-bottom: 36px;
-    .label {
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
 
-.label .renovate-your-home-wrapper {
-  border: 0px none;
-  height: 159.91px;
-  width: 646px;
-}
-
-.label .renovate-your-home {
-  color: transparent;
-  font-family: "Inter-Bold", Helvetica;
-  font-size: 56px;
-  font-weight: 700;
- // left: 0;
-  letter-spacing: 0;
-  line-height: 70px;
- // position: fixed;
- // top: 0;
-  width: 646px;
-}
-
-.label .text-wrapper {
-  color: #0b0a31;
-}
-
-.label .span {
-  color: #16c89e;
-}
-
-.label .text-wrapper-2 {
-  color: #0b0a31;
-}
-
-.label .text-wrapper-3 {
-  color: #16c89e;
-}
-
+    h1{
+      //color: transparent;
+      font-family: "Inter-Bold", Helvetica;
+      font-size: 3.5rem;
+      width: 646px;
+      font-weight: 700;
+    // left: 0;
+      letter-spacing: 0;
+      line-height: 70px;
+    }
 @media screen and (max-width: 768px) {
-  margin-bottom: 11px;
+  margin-bottom: auto;
+  //width: 320px;
+  //padding-left:0px ;
 
-  .label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-  .label .renovate-your-home-wrapper {
-    width: 100%;
-  }
-
-  .label .renovate-your-home {
-    font-size: 36px;
-    line-height: 50px;
-    width: 380px;
-    padding-left: 25px;
-  }
+  h1{
+      width: auto;
+      font-size: 2.5rem;
+      line-height: 50px;
+    }
 }
 
 `
-const Text = styled.div`.label {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .label .p-wrapper {
-    border: 0px none;
-    height: 83.36px;
-    width: 623px;
-  }
-  
-  .label .text-wrapper {
+const Text = styled.div`
+
+  p{
     color: #b9b9b9;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
@@ -303,26 +251,13 @@ const Text = styled.div`.label {
     letter-spacing: 0;
     line-height: normal;
     width: 623px;
+    padding: 10px 0;
   }
+
 
    @media screen and (max-width:768px){
-
-    .label {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    //width: 100%;
-  }
-  
-  .label .p-wrapper {
-    border: 0px none;
-    height: 83.36px;
-    width: 400px;
-  }
-  
-  .label .text-wrapper {
-    color: #b9b9b9;
+    p{
+      color: #b9b9b9;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
     font-weight: 500;
@@ -331,26 +266,22 @@ const Text = styled.div`.label {
     line-height: normal;
     //position: fixed;
     //top: 0;
-    width: 360px;
-    padding-left: 25px;
-  }
-
+    width: 325px;
+    padding-left: 10px;
+    }
    }
   `
 const Button = styled.div`
 
         display: flex;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 40px;
+
         @media screen and (max-width: 768px) {
         display: table-row;
         align-items: center;
         
         }
-
-
-        
-
     `
 const GetStarted = styled.div`
     margin-right: 2.25rem;
@@ -377,7 +308,7 @@ const GetStarted = styled.div`
     .box .overlap-group {
     height: 4.688rem;
     position: relative;
-    width: 10.25rem;
+    width: 11.25rem;
 
     }
 
@@ -411,6 +342,8 @@ const GetStarted = styled.div`
     //flex-direction: column;
    // align-items: center;
    //justify-content: center;
+   padding: 20px 0;
+   padding-left: 5px;
   }
   .box .overlap-group {
     //padding-left: 15px;
@@ -419,7 +352,7 @@ const GetStarted = styled.div`
 
   .box .get-started-box-wrapper {
     //width: 100%;
-    padding-left: 25px;
+    //padding-left: 25px;
   }
 }
 `
@@ -439,7 +372,7 @@ const FindContractor = styled.div`
     border: 0px none;
     height: 83px;
     overflow-x: hidden;
-    width: 199px;
+    width: 209px;
     }
 
     .box .find-contractors-box {
@@ -447,7 +380,7 @@ const FindContractor = styled.div`
     /* left: 0;
     position: fixed;
     top: 0; */
-    width: 193px;
+    width: 183px;
     }
 
     .box .overlap-group {
@@ -488,6 +421,7 @@ const ImgContent = styled.div`
     /* top: 100px;
     left: 880px; */
     //margin-bottom: 80px;
+    //padding-left: 250px;
     
     .box {
   background-color: transparent;
@@ -507,7 +441,7 @@ const ImgContent = styled.div`
   border: 0px none;
   height: 626px;
   position: relative;
-  width: 672px;
+  width: 472px;
   margin-bottom: 50px;
 }
 
@@ -516,7 +450,7 @@ const ImgContent = styled.div`
   /* left: 0;
   position: fixed;
   top: 0; */
-  width: 672px;
+  width: 472px;
 }
 
 .box .overlap {
@@ -594,7 +528,7 @@ const ImgContent = styled.div`
   left: 204px;
   position: absolute;
   top: 379px;
-  width: 470px;
+  width: 305px;
 }
 
 .box .rectangle-2 {
@@ -610,14 +544,14 @@ const ImgContent = styled.div`
   left: 155px;
   position: absolute;
   top: 160px;
-  width: 315px;
+  width: 195px;
 }
 
 
 .box .overlap-group-2 {
   height: 88px;
   position: relative;
-  width: 313px;
+  width: 176px;
 }
 .box .rec {
   //background: linear-gradient(180deg, rgb(255, 255, 255) 0%);
@@ -640,7 +574,7 @@ const ImgContent = styled.div`
   line-height: normal;
   position: absolute;
   top: 28px;
-  width: 262px;
+  width: 122px;
 }
 
 .box .worker {

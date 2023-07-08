@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { LanguageContext } from './LanguageContext'
 import en from '../locales/en.json';
 import ar from '../locales/ar.json';
 import { useNavigate } from 'react-router-dom';
@@ -8,11 +7,6 @@ import { Link } from 'react-scroll'
 
 
 const Header = () => {
-
-  // const { toggleLanguage } = useContext(LanguageContext);
-
-  // const { language } = useContext(LanguageContext);
-  // const translations = language === 'en' ? en : ar;
 
   const navigate = useNavigate();
 

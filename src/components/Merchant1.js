@@ -87,7 +87,7 @@ const Merchant1 = () => {
             <Content>
 
                 <Img>
-                    <img src='\images\merchant.jpg'></img>
+                    <img src='\images\Merchantimg.jpg'></img>
                 </Img>
                 <Form>
                     <Heading> <h2>Merchant Registration</h2> </Heading>
@@ -264,8 +264,9 @@ const Item1 = styled.div`
 `
 const Content = styled.div`
     display: flex;
-    width: 662px;
-    height: 1104px;
+    width: 762px;
+    height: 784px;
+
     @media screen and (max-width:768px){
         padding-left: 15px;
     }
@@ -280,9 +281,10 @@ const Img = styled.div`
         padding-left: 10px;
     }
     img{
-       width: 662px;
-       height: 1104px;
+       width: 742px;
+       height: 784px;
        flex-shrink: 0;
+       opacity: 60%;
     }
     
  `

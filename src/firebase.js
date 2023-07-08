@@ -12,7 +12,7 @@ const firebaseConfig = {
     // messagingSenderId: "1022375214581",
     // appId: "1:1022375214581:web:a84a282a1cf6473d0334bc",
     // measurementId: "G-T3QE62WWBH"
-    apiKey: "AIzaSyBGGjXkPejbQlBl_V-mnGXNOKUWnXqMh0s",
+    apiKey: "AIzaSyBGGjXkPejbQlBl_V-mnGXNOKUWnXqMh0s",   
     authDomain: "reno-tech.firebaseapp.com",
     projectId: "reno-tech",
     storageBucket: "reno-tech.appspot.com",

@@ -81,7 +81,6 @@ const SignUp = () => {
             // Set an error state or display an error message indicating that all fields are required
             console.error('Please fill in all the required fields.');
             alert('Please fill in all the required fields.');
-            return;
           }
 
         auth
@@ -132,7 +131,7 @@ const SignUp = () => {
                     <img src='\images\sigupimg.png'></img>
                 </Img>
                 <Form >
-                    <Heading> <h2>Coustumer Registration</h2> </Heading>
+                    <Heading> <h2>Customer Registration</h2> </Heading>
 
                     <FormItem>
                         <Item>
@@ -141,13 +140,18 @@ const SignUp = () => {
                                 onChange={(e) => setNationalId(e.target.value)} required></input>
                         </Item>
                         <Item>
-                            <p>Mobile No*</p>
+                             <p>Mobile No*</p>
+                             <div className='wrap'>
+                            <div className='Left'>+996</div>
+                            <div className='Right'>
                             <input type='number' placeholder='Enter your Mobile No ' value={mobile}
                                 onChange={(e) => setMobile(e.target.value)} required max={10}></input>
+                            </div>
+                            </div>
                         </Item>
                         <Item>
-                            <p>Date of birtrh</p>
-                            <input type='number' placeholder='dd-mm-yyyy' value={dateOfBirth}
+                            <p>Date of birth</p>
+                            <input type='date' placeholder='dd-mm-yyyy' value={dateOfBirth} required
                                 onChange={(e) => setDateOfBirth(e.target.value)}></input>
                         </Item>
                         <Item>
@@ -176,7 +180,7 @@ const SignUp = () => {
                         <div className="block">
                             <div className="termnCond" >
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required />
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} />
                                     <label htmlFor="tickBox" ></label>
                                 </div>
                                 <p className="i-m-over-years">
@@ -188,7 +192,7 @@ const SignUp = () => {
                             </div>
                             <div className='privacy'>
                                 <div className='tickBox'>
-                                    <input type="checkbox" id="tickBox" style={tickBoxStyle} required/>
+                                    <input type="checkbox" id="tickBox" style={tickBoxStyle}/>
                                     <label htmlFor="tickBox"></label>
                                 </div>
                                 <p className="i-agree-to-privacy">
@@ -208,7 +212,7 @@ const SignUp = () => {
                         </div>
                     </SignUpBtn>
 
-                    <Merchant>Not a customer sign up as <a href='merchant1'>Merchant</a>.</Merchant>
+                    <Merchant>Not a customer sign up as <a href='merchant'>Merchant</a>.</Merchant>
                 </Form>
             </Content>
         </Container>
@@ -267,8 +271,9 @@ const Img = styled.div`
     }
     img{
        // max-height: 865px;
-       width: 662px;
-       height: 1104px;
+       width: 602px;
+       height: 1114px;
+       opacity: 60%;
       // background: linear-gradient(135deg, rgba(249, 245, 255, 0.56) 0%, rgba(214, 190, 249, 0.56) 49.27%, rgba(42, 11, 87, 0.56) 100%);
       // border-radius: 36px;
 
@@ -339,6 +344,35 @@ const Item = styled.div`
         //width: 200px;
 }
 
+.Right{
+    input{
+        width: 270px;
+    }
+}
+
+.Left{
+width: 65px;
+height: 42px;
+border-radius: 15px;
+background: #f5f5f5;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+justify-content: center;
+align-items: center;
+display: flex;
+color: #BDBDBD;
+//font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-right: 15px;
+border: solid black 2px;
+}
+.wrap{
+    display: flex;
+    //justify-content: space-around;
+}
+
 @media screen and (max-width : 768px){
     p{
         font-size: 16px;
@@ -348,6 +382,12 @@ const Item = styled.div`
         height: 42px;
         width: 250px;
     }
+
+    .Right{
+    input{
+        width: 163px;
+    }
+}
 }
 
  `
@@ -357,7 +397,7 @@ const SignUpBtn = styled.div`
     align-items: center;
     position: relative;
     margin: 30px 0px;
-    margin-left: 110px;
+    margin-left: 100px;
     cursor: pointer;
     @media screen and (max-width:768px){
         margin-left: 84px;
@@ -415,6 +455,7 @@ const Term = styled.div`
 
     .text-wrapper-2 {
         text-decoration: underline;
+        font-size: 12px;
     }
 
     .i-agree-to-privacy {
@@ -460,6 +501,7 @@ const Term = styled.div`
 `
 const Merchant = styled.div`
     margin-left: 39px;
+    padding-bottom: 30px;
     a{
         cursor: pointer;
     }

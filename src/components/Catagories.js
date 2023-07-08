@@ -50,7 +50,7 @@ const TextContent = styled.div`
     margin: 0 170px;
     p{
         color:#16C99E;
-        font-family: "Inter-SemiBold", Helvetica;
+        font-family: "Inter-Medium", Helvetica;
         font-size: 20px;
         font-weight: 600;
         letter-spacing: 0;
@@ -60,14 +60,14 @@ const TextContent = styled.div`
     }
     h1{
         display: flex;
-        font-family: "Inter-SemiBold", Helvetica;
+        font-family: "Inter-Medium", Helvetica;
         width: 765px;
         //height: 159.91px;
         flex-direction: column;
         flex-shrink: 0;
         color: #0B0A31;
         font-size: 45px;
-        font-family: Inter;
+        //font-family: Inter;
         font-weight: 700;
         line-height: 70px;
         @media (max-width: 768px) {
@@ -115,9 +115,10 @@ align-items: center;
         color: #0B0A31;
         text-align: center;
         font-size: 20px;
-        font-family: Inter;
         font-weight: 700;
         line-height: 30px;
+        //font-family: Arial, Helvetica, sans-serif;
+        
         
     }
 `
@@ -129,7 +130,7 @@ const Img = styled.div`
         padding-left: 54px;
         color: #0B0A31;
         font-size: 20px;
-        font-family: Inter;
+        font-family: "Inter-Medium",Helvetica;
         font-weight: 700;
         line-height: 30px;
     }

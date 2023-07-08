@@ -39,14 +39,7 @@ const Bussiness = () => {
       
           // Get the download URL of the uploaded file
           const downloadURL = await snapshot.ref.getDownloadURL();
-      
-          // Store the download URL in Firestore
-          /*const docRef = firestore.collection('files').doc();
-          await docRef.set({
-            fileName: file.name,
-            downloadURL: downloadURL,
-          });*/
-          //setSelectedPortfolioFile(downloadURL)   
+           
           return downloadURL 
       
           console.log('File uploaded and download URL stored in setSelectedPortfolioFile.');
@@ -144,7 +137,7 @@ const Bussiness = () => {
             <Content>
 
                 <Img>
-                    <img src='\images\merchant.jpg'></img>
+                    <img src='\images\bussiness.jpg'></img>
                 </Img>
                 <Form>
                     <Heading> <h2>Bussiness Information</h2> </Heading>
@@ -201,7 +194,7 @@ const Bussiness = () => {
                             <CompType>
                                 <div className="dropdown-container" onChange={handleDropdownChange2}>
                                     <p>Services Offered*</p>
-                                    <select className="dropdown-content" required multiple>
+                                    <select className="dropdown-content" required>
                                         <option className="dropdown-opt" value="" disabled selected hidden>----Select----</option>
                                         <option className="dropdown-opt">Plumbing</option>
                                         <option className="dropdown-opt">Electrical</option>
@@ -383,7 +376,7 @@ const Item1 = styled.div`
 const Content = styled.div`
     display: flex;
     width: 662px;
-    height: 1104px;
+    height: 804px;
     @media screen and (max-width:768px){
         padding-left: 15px;
     }
@@ -391,16 +384,17 @@ const Content = styled.div`
 `
 
 const Img = styled.div`
-    margin-right: 60px;
+    margin-right: 80px;
     align-items: center;
     @media screen and (max-width:768px){
         display: none;
         padding-left: 10px;
     }
     img{
-       width: 662px;
-       height: 1104px;
+       width: 562px;
+       height: 806px;
        flex-shrink: 0;
+       opacity: 60%;
     }
     
  `
