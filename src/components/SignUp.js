@@ -219,7 +219,7 @@ const SignUp = () => {
                         <Item>
                             <p>First Name*</p>
                             <input type='text' placeholder='Enter your First Name' value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}  disabled={!isEmailValid} required></input>
+                                onChange={(e) => setFirstName(e.target.value)} required></input>
                         </Item>
                         <Item>
                             <p>Last Name</p>
