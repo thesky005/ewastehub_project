@@ -11,7 +11,6 @@ const Home = () => {
 
   return (
     <div>
-      <Header/>
       <Main/>
       <Catagories/>
       <Middle/>

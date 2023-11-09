@@ -1,32 +1,44 @@
 import React from 'react';
 import Home from './components/Home'
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
- } from "react-router-dom";
+} from "react-router-dom";
 import SignUp from './components/SignUp';
-import Merchant1 from './components/Merchant1';
+import Header from './components/Header';
 import Verification from './components/Verification';
 import ThankYou from './components/ThankYou';
-import Bussiness from './components/Bussiness';
-import Finanicial from './components/Finanicial'
-   
+import EwasteFacility from './components/EwasteFacility';
+import Trading from './components/Trading';
+import Dashboard from './components/Dashboard';
+import Chatbot from './components/Chatbot';
+
 
 const App = () => {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+
+
 
   return (
-    <Router> 
-    <Routes>
-      <Route path ="/" element ={<Home/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
-      <Route path="/merchant" element={<Merchant1/>}/>
-      <Route path="/verification" element={<Verification/>}/>
-      <Route path="/thankyou" element={<ThankYou/>}/>
-      <Route path="/bussiness" element={<Bussiness/>}/>
-      <Route path="/finanicial" element={<Finanicial/>}/>
-    </Routes>
-  </Router>
+
+    <Router>
+      <Header isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/findewastefacility" element={<EwasteFacility />} />
+        <Route path="/signup" element={<SignUp setIsUserLoggedIn={setIsUserLoggedIn} />} />
+        {/* <Route path="/merchant" element={<Merchant1/>}/> */}
+        <Route path="/verification" element={<Verification />} />
+        <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="/trading" element={<Trading/>} /> 
+        <Route path="/customerdasboard" element={<Dashboard/>} />
+        <Route path="/api/chatbot" element={<Chatbot/>} />
+        {/* <Route path="/bussiness" element={<Bussiness/>}/> */}
+        {/* <Route path="/finanicial" element={<Finanicial/>}/> */}
+      </Routes>
+    </Router>
   );
 };
 

@@ -5,20 +5,14 @@ import 'firebase/storage';
 import 'firebase/analytics';
 
 const firebaseConfig = {
-    // apiKey: "AIzaSyDii9JcM2-zjW-6gAGx6VeLoH1WNWJZMWg",
-    // authDomain: "reno-project-fa61b.firebaseapp.com",
-    // projectId: "reno-project-fa61b",
-    // storageBucket: "reno-project-fa61b.appspot.com",
-    // messagingSenderId: "1022375214581",
-    // appId: "1:1022375214581:web:a84a282a1cf6473d0334bc",
-    // measurementId: "G-T3QE62WWBH"
-    apiKey: "AIzaSyBGGjXkPejbQlBl_V-mnGXNOKUWnXqMh0s",   
-    authDomain: "reno-tech.firebaseapp.com",
-    projectId: "reno-tech",
-    storageBucket: "reno-tech.appspot.com",
-    messagingSenderId: "542770781700",
-    appId: "1:542770781700:web:771429b87cf03979375f51",
-    measurementId: "G-JCYDJ0Y07W"
+  apiKey: "AIzaSyD8IwI4m9faPn1hmpvjli5G_SgY4KhE11A",
+  authDomain: "ewastehub-7444a.firebaseapp.com",
+  databaseURL: "https://ewastehub-7444a-default-rtdb.firebaseio.com",
+  projectId: "ewastehub-7444a",
+  storageBucket: "ewastehub-7444a.appspot.com",
+  messagingSenderId: "178562777158",
+  appId: "1:178562777158:web:964ac98524cda0c5d64a47",
+  measurementId: "G-M0QRYPPTG6"
   };
 
   const firebaseApp= firebase.initializeApp(firebaseConfig);

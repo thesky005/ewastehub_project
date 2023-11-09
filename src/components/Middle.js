@@ -6,44 +6,44 @@ const Middle = () => {
     <Container>
       <TextContent>
         <p>THE BEST IN TOWN</p>
-        <h1>Why RENO is unique</h1>
+        <h1>Why EwasteHub is unique</h1>
       </TextContent>
       <Content>
         <ContentItem>
           <Wrap>
-            <img src='\images\Project.svg'></img>
-            <p>Project Timeline Management</p>
+            <img src='\images\nearby.png'></img>
+            <p>Nearby Locator</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Group.svg'></img>
-            <p>Transparent Communication</p>
+            <img src='\images\desktop.png'></img>
+            <p>Educational Pop-ups</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Quality control.svg'></img>
-            <p>Quality Assurance</p>
+            <img src='\images\gift-card.png'></img>
+            <p>Model-Based Rewards</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Operator.svg'></img>
-            <p>Assistance in Bid Comparison</p>
+            <img src='\images\cpu.png'></img>
+            <p>Precious Metal Trading</p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Workers.svg'></img>
-            <p>Contractor Accountability
+            <img src='\images\environmental-protection.png'></img>
+            <p>Environmental Impact
 </p>
           </Wrap>
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\Payment method.svg'></img>
-            <p>Secure Payment System</p>
+            <img src='\images\medical-care.png'></img>
+            <p>Health Awareness</p>
           </Wrap>
         </ContentItem>
       </Content>
@@ -57,31 +57,31 @@ const Middle = () => {
           <div className='step'>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Presentation.svg'></img>
+                <img src='\images\search.png'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
                   <p>1</p>
                 </Wrap1>
               </Wrap0>
-              <Wrap2><p>Post Your Project</p></Wrap2>
+              <Wrap2><p>Find E-Waste Facilities</p></Wrap2>
               {/* <Wrap3>Start by posting your project details and requirements on the app.</Wrap3> */}
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Worker2.svg'></img>
+                <img src='\images\image.png'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
                   <p>2</p>
                 </Wrap1>
               </Wrap0>
-              <Wrap2> <p>Connect with Contractors</p>  </Wrap2>
+              <Wrap2> <p>Upload Electronic Device/Item</p>  </Wrap2>
               {/* <Wrap3>Review the shortlisted contractors and choose the ones you would like to connect with.</Wrap3> */}
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Bid.svg'></img>
+                <img src='\images\bleach.png'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
@@ -89,7 +89,7 @@ const Middle = () => {
                 </Wrap1>
               </Wrap0>
               <Wrap0>
-                <Wrap2> <p>Get Competitive Bids</p>  </Wrap2>
+                <Wrap2> <p>Identify Harmful Components</p>  </Wrap2>
               </Wrap0>
               <Wrap0>
                 {/* <Wrap3>Reach out to the chosen contractors and share your project details with them.</Wrap3> */}
@@ -97,14 +97,14 @@ const Middle = () => {
             </ImgLineWrap>
             <ImgLineWrap>
               <Wrapimg>
-                <img src='\images\Cashless payment.svg'></img>
+                <img src='\images\wallet.png'></img>
               </Wrapimg>
               <Wrap0>
                 <Wrap1>
                   <p>4</p>
                 </Wrap1>
               </Wrap0>
-              <Wrap2><p>Secure Payments & Support</p></Wrap2>
+              <Wrap2><p>Earn Credit Points</p></Wrap2>
               {/* <Wrap3>Provides a trusted and reliable platform for users to make payments to contractors.</Wrap3> */}
             </ImgLineWrap>
           </div>
@@ -116,28 +116,31 @@ const Middle = () => {
 
       <Section>
         <div className="reno-for-shoppers">
-          <h1 className="text-wrapper">Unleashing Renovation Innovation</h1>
-          <p className="p">Effortlessly transform your homes and spaces with the Reno mobile app.</p>
+          <h1 className="text-wrapper">Eco Marketplace - Trade With Us</h1>
+          <p className="p">Here we Provide e-commerce site on which user can buy and sell (1) electronic items to reduce ewaste generation (2) sell art made from recycled e-waste</p>
           <a href='signup'>
           <div className="get-the-app-box">
             <div className="overlap-group">
               {/* <img className="ph-arrow-up" alt="Ph arrow up" src="ph-arrow-up.png" /> */}
-              <div className="div">Get Started</div>
+              <a href='customerdasboard'>
+              <div className="div">Trade Now</div>
+              </a>
             </div>
           </div>
           </a>
         </div>
-        <img className="rectangle" alt="Rectangle" src="\images\home.png" />
+        <img className="rectangle" alt="Rectangle" src="\images\tradable item.jpg" />
       </Section>
       <Section>
         <div className="reno-for-shoppers">
-          <h1 className="text-wrapper">Grow your business with RENO</h1>
-          <p className="p">Unleash the Power of Reno for Unprecedented Business Success.</p>
-          <a href='merchant'>
+          <h1 className="text-wrapper">Recycling Statistics</h1>
+          <p className="p">Realtime statistics of e-waste generated and recovered through recycling through charts and can also enlist reports about the same
+</p>
+          <a href='chatbot'>
           <div className="get-the-app-box">
             <div className="overlap-group1">
               {/* <img className="ph-arrow-up" alt="Ph arrow up" src="ph-arrow-up.png" /> */}
-              <div className="div1">RENO for business</div>
+              <div className="div1">Explore Now</div>
             </div>
            
           </div>
@@ -145,7 +148,7 @@ const Middle = () => {
 
         </div>
         <div className="emptyspace"><p></p></div>
-        <img className="rectangle" alt="Rectangle" src="\images\person.png" />
+        <img className="rectangle" alt="Rectangle" src="\images\statistics.png" />
       </Section>
     </Container>
   )
@@ -376,8 +379,8 @@ const Wrapimg = styled.div`
   align-items: center;
   padding-bottom : 64px;
   margin: 0 30px;
-  width: 150px;
-    height: 150px;
+  width: 120px;
+    height: 120px;
   img{
     padding-left: 12px;
     
@@ -450,6 +453,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding-top:5.625rem ;
+
+img{
+  border-radius: 16px;
+}
 
 @media screen and (max-width : 768px){
   display: inline-block;
@@ -561,7 +568,7 @@ padding-top:5.625rem ;
   border-radius: 18.39px;
   height: 3.6875rem;
   position: relative;
-  width: 12.5rem;
+  width: 8.9rem;
 }
 
 .ph-arrow-up {
@@ -580,7 +587,7 @@ padding-top:5.625rem ;
   position: absolute;
   top: 19px;
   white-space: nowrap;
-  width: 117px;
+  width: 96px;
 }
 
 `

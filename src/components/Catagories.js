@@ -14,16 +14,16 @@ const Catagories = () => {
             </TextContent>
             <ImgContent>
                 <Img>
-                    <img src="\images\Painting.png" alt="Painting" srcset="" />
-                    <p>Painting Expert</p>
+                    <img src="\images\ewastecat.jpg" alt="Painting" srcset="" />
+                    <p>EwasteHub List</p>
                 </Img>
                 <Img>
-                    <img src="\images\Patching.png" alt="Painting" srcset="" />
-                    <p>Patching and Repair Expert</p>
+                    <img src="\images\ewasteedu.jpg" alt="Painting" srcset="" />
+                    <p>Eductional Content</p>
                 </Img>
                 <Img>
-                    <img src="\images\tilling.png" alt="Painting" srcset="" />
-                    <p>Tiling Expert</p>
+                    <img src="\images\ewastecat.jpg" alt="Painting" srcset="" />
+                    <p>Ewaste Trading</p>
                 </Img>
 
             </ImgContent>

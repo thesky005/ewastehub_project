@@ -7,7 +7,7 @@ const Footer = () => {
 
 
             <Logo>
-                <img src='\images\logoLight.ac6c7baa381e9eae7cf5.png'></img>
+                <img src='\images\ewastehub-high-resolution-logo-white-transparent.svg'></img>
                 <SocialMedia>
                     <a><img src='\images\Facebook.svg'></img></a>
                     <a><img src='\images\Instagram.svg'></img></a>

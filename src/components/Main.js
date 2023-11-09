@@ -7,33 +7,33 @@ const Main = () => {
       <TextContent>
         <RenovateTag>
           <div className="box">
-            <div className="mail-button-wrapper">
-              <div className="mail-button">
+            {/* <div className="mail-button-wrapper"> */}
+              {/* {/* <div className="mail-button"> */}
                 <div className="overlap-group">
-                  <div className="text-wrapper">Renovate with ease</div>
-                  <img className="vector" alt="Vector" src="\images\Vector.svg" />
+                  <div className="text-wrapper">Clean Earth, Green Earth</div>
+                  {/* <img className="vector" alt="Vector" src="\images\Vector.svg" /> */}
                 </div>
-              </div>
-            </div>
-          </div>
+             </div>
+            {/* </div> */}
+          {/* </div> */}
         </RenovateTag>
         <RenovateText>
 
 
               <h1>
-                <span>Renovate your home with RENO</span>
+                <span>E-Waste Recycling: Where Technology Meets Sustainability</span>
               </h1>
           
 
         </RenovateText>
         <Text>
 
-              <p>We help you find the best contractor for your home renovation</p>
+              <p>the transformation of electronic waste into sustainable solutions, preserving our environment and resources for a better future</p>
         
         </Text>
         <Button>
           <GetStarted>
-            <a href='merchant'>
+            <a href='trading'>
             <div className="box">
               <div className="get-started-box-wrapper">
                 <div className="get-started-box">
@@ -47,48 +47,24 @@ const Main = () => {
             </a>
           </GetStarted>
           <FindContractor>
+            <a href='\findewastefacility'>
             <div className="box">
               <div className="find-contractors-box-wrapper">
                 <div className="find-contractors-box">
                   <div className="overlap-group">
                     <div className="rectangle" />
-                    <div className="text-wrapper">Find Contractors</div>
+                    <div className="text-wrapper">Find EwasteHub</div>
                   </div>
                 </div>
               </div>
             </div>
+            </a>
           </FindContractor>
         </Button>
       </TextContent>
       <ImgContent>
         <div className="box">
-          <div className="main-photo-ara-wrapper">
-            <div className="main-photo-ara">
-              <div className="overlap">
-                <img className="rectangle" alt="Rectangle" src="\images\Rectangle3.png" />
-                <div className="add-profile">
-                  <img className="add-user" alt="Add user" src="\images\Add user.svg" />
-                </div>
-              </div>
-              <div className="overlap-group">
-                <img className="img" alt="Rectangle" src="\images\Rectangle4.png" />
-                <div className="send-message">
-                  <img className="send" alt="Send" src="\images\Send.svg" />
-                </div>
-              </div>
-
-              <div className="div">
-                <img className="rectangle-2" alt="Rectangle" src="\images\Rectangle5.png" />
-                <div className="top-workers">
-                  <div className="overlap-group-2">
-                    <div className="rec" />
-                    <div className="text-wrapper">Top Contractors</div>
-                    <img className="worker" alt="Worker" src="\images\Worker.svg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src="\images\ewastemainimg.png" alt="" />
         </div>
       </ImgContent>
 
@@ -101,8 +77,9 @@ const Main = () => {
 export default Main
 const Container = styled.div`
   display: flex;
+  //margin-top: 50px;
   align-items: center;
-  margin: 1.875rem 10.625rem;
+  margin: 2.875rem 8.625rem;
   min-height: 500px;
   //background-color: aliceblue;
   justify-content: space-around;
@@ -143,10 +120,10 @@ const RenovateTag = styled.div`
 .box .overlap-group {
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%);
   border-radius: 20px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 54px;
+  box-shadow: 0px 2px 4px 1px #00000040;
+  height: 44px;
   position: relative;
-  width: 248px;
+  width: 278px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +139,7 @@ const RenovateTag = styled.div`
   line-height: normal;
   //position: absolute;
   //top: 26px;
-  width: 199px;
+  //width: 199px;
 }
 
 .box .vector {
@@ -221,7 +198,7 @@ const RenovateText = styled.div`
     h1{
       //color: transparent;
       font-family: "Inter-Bold", Helvetica;
-      font-size: 3.5rem;
+      font-size: 3.0rem;
       width: 646px;
       font-weight: 700;
     // left: 0;
@@ -358,7 +335,7 @@ const GetStarted = styled.div`
 `
 const FindContractor = styled.div`
 
-  opacity: 0;
+  opacity: 1;
 
     .box {
     background-color: transparent;
@@ -429,160 +406,16 @@ const ImgContent = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
+
+  img{
+    height: 626px;
+  width: 472px;
+  }
   
 
   @media screen and (max-width: 768px) {
     display: none;
     
   }
-}
-
-.box .main-photo-ara-wrapper {
-  border: 0px none;
-  height: 626px;
-  position: relative;
-  width: 472px;
-  margin-bottom: 50px;
-}
-
-.box .main-photo-ara {
-  height: 726px;
-  /* left: 0;
-  position: fixed;
-  top: 0; */
-  width: 472px;
-}
-
-.box .overlap {
-  height: 355px;
-  left: 204px;
-  position: absolute;
-  top: 0;
-  width: 294px;
-}
-
-.box .rectangle {
-  height: 305px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  //width: 210px;
-}
-
-.box .add-profile {
-  background-color: #efc14c;
-  border-radius: 41.89px/38.54px;
-  height: 60px;
-  left: 180px;
-  position: absolute;
-  top: 42px;
-  width: 64px;
-}
-
-.box .add-user {
-  height: 30px;
-  left: 18px;
-  object-fit: cover;
-  position: absolute;
-  top: 14px;
- // width: 40px;
-}
-
-.box .overlap-group {
-  height: 494px;
-  left: 7px;
-  position: absolute;
-  top: 115px;
-  width: 188px;
-}
-
-.box .img {
-  height: 408px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  //width: 182px;
-}
-
-.box .send-message {
-  background-color: #16c89e;
-  border-radius: 44.02px/40.5px;
-  height: 71px;
-  left: 120px;
-  position: absolute;
-  top: 363px;
-  width: 72px;
-}
-
-.box .send {
-  height: 33px;
-  left: 19px;
-  object-fit: cover;
-  position: absolute;
-  top: 22px;
-  width: 33px;
-}
-
-.box .div {
-  height: 347px;
-  left: 204px;
-  position: absolute;
-  top: 379px;
-  width: 305px;
-}
-
-.box .rectangle-2 {
-  height: 305px;
-  left: 0;
-  position: relative;
-  bottom: 48px;
-  width: 220px;
-}
-
-.box .top-workers {
-  //height: 88px;
-  left: 155px;
-  position: absolute;
-  top: 160px;
-  width: 195px;
-}
-
-
-.box .overlap-group-2 {
-  height: 88px;
-  position: relative;
-  width: 176px;
-}
-.box .rec {
-  //background: linear-gradient(180deg, rgb(255, 255, 255) 0%);
-  background-color:rgb(255, 255, 255) ;
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 70px;
-  /* left: 0;
-  position: absolute;
-  top: 0; */
-  width: 175px;
-}
-.box .text-wrapper {
-  color: #000000;
-  font-family: "Inter-SemiBold", Helvetica;
-  font-size: 15px;
-  font-weight: 600;
-  left: 51px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 28px;
-  width: 122px;
-}
-
-.box .worker {
-  //height: 45px;
-  left: 8px;
-  object-fit: cover;
-  position: absolute;
-  top: 17px;
-  width: 32px;
 }
 `
