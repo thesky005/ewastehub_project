@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  overflow-x:hidden; 
+}
+
+@media screen and (max-width:768px) {
+  html{
+    overflow-x: hidden;
+    max-width: 400px;
+  }
+}
