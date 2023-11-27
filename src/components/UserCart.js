@@ -8,69 +8,50 @@ import { useParams } from "react-router-dom";
 
 
 
-const Dashboard = () => {
+const UserCart = () => {
 
-  const db = firebase.firestore()
-
-  const { id } = useParams();
-
-  console.log('Id : ',id)
-
- // const user = firebase.auth().currentUser;
-  const [tradingData, setTradingData] = useState([]);
-
-  useEffect(() => {
-    const db = firebase.firestore();
-
-    // Fetch data from the "trading-data" collection
-    const unsubscribe = db.collection("trading-data").onSnapshot((querySnapshot) => {
-      const data = [];
-      querySnapshot.forEach((doc) => {
-        // Push each document's data to the data array
-        data.push(doc.data());
-      });
-      // Update the tradingData state with the fetched data
-      setTradingData(data);
-    });
-
-    // Return the unsubscribe function to stop listening when the component unmounts
-    return () => unsubscribe();
-  }, []);
-
-  const handleAddToAddtoCart = (productname) => {
-    // Get the current user
-    const user = firebase.auth().currentUser;
-
-    // Check if the user is authenticated
-    if (user) {
-      // Reference to the user's cart collection in Firestore
-      const userCartRef = db.collection("users").doc(user.uid).collection("cart");
-
-      // Get the selected item from the trading data
-      const selectedItem = tradingData.find(item => item.productname === productname);
-      console.log("Selected Item:", selectedItem);
-
-      // Add the item to the user's cart collection
-      userCartRef.add(selectedItem)
-      .then(() => {
-        console.log("Item added to cart successfully!");
-        alert('Item added to cart successfully!');
-      })
-      .catch((error) => {
-        console.error("Error adding item to cart:", error);
-      });
-    } else {
-      // User is not authenticated, handle accordingly (e.g., redirect to login)
-      console.log("User is not authenticated. Please log in.");
-      alert("User is not authenticated. Please log in.");
-    }
-  };
-
+    const user =  firebase.auth().currentUser;
+    //console.log("User UID get : ",user.uid)
+  
+    const { id } = useParams();
+    
+  
+    const [cart , setcart] = useState([]);
+  
+    
+  
+    useEffect(() => {
+      // Check if a user is authenticated
+      if (user) {
+        const db = firebase.firestore();
+  
+        // Reference to the user's watchlist collection
+        const cartRef = db.collection('users').doc(user.uid).collection('cart');
+        console.log(cartRef)
+  
+        // Set up a listener to get watchlist data
+        const unsubscribe = cartRef.onSnapshot((querySnapshot) => {
+          const data = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          console.log("Cart Data:", data);
+          setcart(data);
+        });
+  
+        return () => {
+          // Unsubscribe from the listener when the component unmounts
+          unsubscribe();
+        };
+      }else{
+        alert("User is not authenticated. Please log in");
+      }
+    }, [user]);
   return (
     <>
       <Wrapper>
         <Content>
-          {tradingData.map((item, index) => (
+          {cart && cart.length > 0 && cart.map((item, index)=> (
             <Card key={index}>
               <DesktopImage
                 src={item.uploadimage}
@@ -86,7 +67,7 @@ const Dashboard = () => {
                   <CurrentPrice>${item.productprice}</CurrentPrice>
                   <OriginalPrice>$169.99</OriginalPrice>
                 </PriceContainer>
-                <Button onClick={() => handleAddToAddtoCart(item.productname)}>
+                <Button>
                   <Icon
                     src={"/images/trolley.png"}
                     alt="Cart"
@@ -102,8 +83,7 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
-
+export default UserCart;
 
 
 

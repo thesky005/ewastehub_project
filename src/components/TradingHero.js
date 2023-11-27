@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const TradingHero = () => {
@@ -28,7 +29,7 @@ const TradingHero = () => {
         </Text>
         <Button>
           <GetStarted>
-            <a href='trading'>
+            <Link to='trading'>
             <div className="box">
               <div className="get-started-box-wrapper">
                 <div className="get-started-box">
@@ -39,10 +40,10 @@ const TradingHero = () => {
                 </div>
               </div>
             </div>
-            </a>
+            </Link>
           </GetStarted>
           <FindContractor>
-            <a href='\customerdasboard'>
+            <Link to='customerdasboard'>
             <div className="box">
               <div className="find-contractors-box-wrapper">
                 <div className="find-contractors-box">
@@ -54,7 +55,7 @@ const TradingHero = () => {
                 </div>
               </div>
             </div>
-            </a>
+            </Link>
           </FindContractor>
         </Button>
       </TextContent>

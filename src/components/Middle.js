@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Middle = () => {
   return (
     <Container>
       <TextContent>
-        <p>THE BEST IN TOWN</p>
+        <p>THE BEST IN ALL</p>
         <h1>Why EwasteHub is unique</h1>
       </TextContent>
       <Content>
@@ -42,13 +43,13 @@ const Middle = () => {
         </ContentItem>
         <ContentItem>
           <Wrap>
-            <img src='\images\medical-care.png'></img>
+            <img src='\images\awareness.png'></img>
             <p>Health Awareness</p>
           </Wrap>
         </ContentItem>
       </Content>
       <TextContent1>
-        <p>HOME REVIVE</p>
+        <p>JOIN US</p>
         <h1>How It Works?</h1>
       </TextContent1>
       <StepLine>
@@ -118,16 +119,16 @@ const Middle = () => {
         <div className="reno-for-shoppers">
           <h1 className="text-wrapper">Eco Marketplace - Trade With Us</h1>
           <p className="p">Here we Provide e-commerce site on which user can buy and sell (1) electronic items to reduce ewaste generation (2) sell art made from recycled e-waste</p>
-          <a href='signup'>
+          <Link to='/tradinglp/customerdasboard'>
           <div className="get-the-app-box">
             <div className="overlap-group">
               {/* <img className="ph-arrow-up" alt="Ph arrow up" src="ph-arrow-up.png" /> */}
-              <a href='customerdasboard'>
+              <Link to='/tradinglp/customerdasboard'>
               <div className="div">Trade Now</div>
-              </a>
+              </Link>
             </div>
           </div>
-          </a>
+          </Link>
         </div>
         <img className="rectangle" alt="Rectangle" src="\images\tradable item.jpg" />
       </Section>
@@ -136,7 +137,7 @@ const Middle = () => {
           <h1 className="text-wrapper">Recycling Statistics</h1>
           <p className="p">Realtime statistics of e-waste generated and recovered through recycling through charts and can also enlist reports about the same
 </p>
-          <a href='chatbot'>
+          <Link to='graph'>
           <div className="get-the-app-box">
             <div className="overlap-group1">
               {/* <img className="ph-arrow-up" alt="Ph arrow up" src="ph-arrow-up.png" /> */}
@@ -144,7 +145,7 @@ const Middle = () => {
             </div>
            
           </div>
-          </a>
+          </Link>
 
         </div>
         <div className="emptyspace"><p></p></div>

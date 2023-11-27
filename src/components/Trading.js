@@ -50,8 +50,8 @@ const Trading = () => {
     };
 
     const handleSubmit = (e) => {
-        const user = firebase.auth().currentUser;
-        console.log(user.uid)
+       // const user = firebase.auth().currentUser;
+       // console.log(user.uid)
         //navigate('/bussiness')
         e.preventDefault();
 
@@ -93,7 +93,9 @@ const Trading = () => {
           setproductbrand('');
           setuploadimage('');
           setproductdescription('');
-          setproductcondition(''); 
+          setproductcondition('');
+          
+          alert('Product is added')
 
 
         // navigate("/finanicial", {

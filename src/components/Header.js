@@ -1,15 +1,17 @@
 import React, { useState , useEffect } from 'react'
 import styled from 'styled-components'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 
 
-const Header = ({ isUserLoggedIn ,setIsUserLoggedIn }) => {
+ const Header = ({ isUserLoggedIn ,setIsUserLoggedIn }) => {
+// const Header = () => {
 
   const navigate = useNavigate();
+ //const { isUserLoggedIn, setIsUserLoggedIn } = useUser();
 
   const user =  firebase.auth().currentUser;
   const db = firebase.firestore();
@@ -23,7 +25,18 @@ useEffect(() => {
   if (storedIsOpen !== null) {
     setIsOpen1(storedIsOpen);
   }
-}, []);
+
+  // Check for user login status here and update the state accordingly
+  const user = firebase.auth().currentUser;
+  setIsUserLoggedIn(!!user); // Set to true if the user is logged in, false otherwise
+}, [isUserLoggedIn]);
+
+// useEffect(() => {
+//   const storedIsOpen = JSON.parse(localStorage.getItem('isOpen1'));
+//   if (storedIsOpen !== null) {
+//     setIsOpen1(storedIsOpen);
+//   }
+// }, []);
 
 if (user) {
   // console.log("User is logged in:", user);
@@ -56,7 +69,7 @@ if (user) {
   // })
 
 } else {
-  console.log('No user is signed in.');
+  //console.log('No user is signed in.');
 }
 
   const scrollToSection = (sectionId) => {
@@ -77,7 +90,7 @@ if (user) {
   const handlesignout = () => {
     firebase.auth().signOut().then(() => {
      
-      navigate('/login')
+      navigate('/signup')
       setIsUserLoggedIn(false);
     }).catch((error) => {
       // An error happened.
@@ -113,18 +126,18 @@ if (user) {
     <NavBar>
       <Rgt>
         <Logo>
-          <a href='/'>
+          <Link to='/'>
             <img src='\images\ewasteLOGO.svg' alt='img'></img>
-          </a>
-
+          </Link>
+{/*  */}
         </Logo>
         <NavMenu>
-        <a href='/'>
+        <Link to='/'>
           <span>Home</span>
-          </a>
-          <a href='tradinglp'>
+          </Link>
+          <Link to='tradinglp'>
           <span>Ecommerce</span>
-          </a>
+          </Link>
           <span onClick={() => scrollToSection('categories-section')}>Features</span>
           <span>About Us</span>
         </NavMenu>
@@ -132,9 +145,12 @@ if (user) {
       {/* <Button> <p>{t('getinapp')}</p></Button> */}
       <Left>
         <Lft>
-          {/* <Button>
-            <img src='\images\circum_mobile-1.svg'></img>
-            <p>Get in App</p></Button> */}
+          <Link to={'usercart'}>
+          <Button>
+            <img src='\images\trolley.png'></img>
+            <p>Cart</p>
+            </Button>
+            </Link>
           {isUserLoggedIn ? (
             <div className="user-icon">
               {/* Render the user icon here */}
@@ -284,7 +300,7 @@ const Button1 = styled.div`
   }
     
   p{
-    font-family: 'Inter';
+    font-family: "Inter-Medium", Helvetica;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -345,8 +361,9 @@ const Button = styled.div`
     background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F5 77.92%);
     border: 0.2px solid #BDBDBD;
     border-radius: 20px;
-    margin-right: 20px;
-    opacity: 0;
+    margin-right: 30px;
+    opacity: 1;
+
     p {
         padding-bottom: 4px;
         margin: 5px;
@@ -355,6 +372,7 @@ const Button = styled.div`
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
+        padding-left: 16px;
     }
     img{
      max-height: 25px;
