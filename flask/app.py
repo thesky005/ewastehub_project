@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, render_template_string
+from flask import Flask, jsonify, render_template_string,request
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from io import BytesIO
 import base64
 from flask_cors import CORS
+import json
 
 app = Flask(__name__)
 CORS(app, origins="http://localhost:3000")
@@ -30,38 +31,15 @@ def get_chart_data(state_name):
     
 
     plt.figure(figsize=(4,26))
-    plt.barh(data['Name/Address'], data['Installed Capacity (MTA)'])
+    bars = plt.barh(data['Name/Address'], data['Installed Capacity (MTA)'])
+
+    for bar, value in zip(bars, data['Installed Capacity (MTA)']):
+        plt.text(bar.get_width(), bar.get_y() + bar.get_height() / 2, f'{value:.2f} MTA', va='center', ha='left')
     #plt.yticks(rotation=45, ha='right')
 
     plt.title('Vertical Bar Chart')
-    plt.xlabel('Installed Capacity (MTA)')
+    plt.xlabel('Installed Capacity (Kg)')
     plt.ylabel('Name/Address')
-
-    # plt.figure(figsize=(15,6))
-    # sns.barplot(x='Installed Capacity (MTA)', y='Name/Address', data=data)
-    # plt.title('Installed Capacity of E-Waste Recycling Facilities in Maharashtra')
-    # plt.xlabel('Installed Capacity (MTA)')
-    # plt.ylabel('Name/Address')
-    #plt.show()
-
-    # plt.figure(figsize=(10, 6))
-    # plt.bar(data['Sno'], data['Installed Capacity (MTA)'])
-    # plt.title('Bar Chart')
-    # plt.xlabel('Sno')
-    # plt.ylabel('Installed Capacity (MTA)')
-
-    # plt.rcParams['font.family'] = 'DejaVu Sans'
-    # import warnings
-
-    # warnings.filterwarnings("ignore", category=UserWarning)
-    # data['Installed Capacity (MTA)'] = pd.to_numeric(data['Installed Capacity (MTA)'], errors='coerce')
-    # plt.figure(figsize=(12,40))
-    # sns.barplot(x='Installed Capacity (MTA)', y='Name/Address', data=data)
-    # plt.title('Installed Capacity of E-Waste Recycling Facilities in Maharashtra')
-    # plt.xlabel('Installed Capacity (MTA)')
-    # plt.ylabel('Name/Address')
-
-
 
     # Save the plot to a BytesIO object
     image_stream = BytesIO()
@@ -73,52 +51,31 @@ def get_chart_data(state_name):
 
     #image_base64 = base64.b64encode(image_stream.getvalue()).decode('utf-8')
 
-
     return jsonify({'chartData': image_base64})
+
+with open('ewasteitms.json') as f:
+    #ewaste_data = json.load(f)
+    ewaste_data = json.load(f).get("ewasteproducts", {})
+    print(ewaste_data)
+
+@app.route('/get_item_details', methods=['POST'])
+def get_item_details():
+    # Get the product name from the request
+   # product_name = request.json.get('productName', None)
+    product_name = request.json.get('productName', None).strip()
+
+    print(f"Received request for product: {product_name}")
+
+    item_details = ewaste_data.get(product_name, None)
+
+    # Check if the product name exists in the data 
+    for item_key, item_details in ewaste_data.items():
+        if item_details.get("productName") == product_name:
+            print(f"Found product: {product_name} in {item_key}")
+            return jsonify(item_details)      
+    else:
+        print(f"Product not found: {product_name}")
+        return jsonify({"error": "Product not found"}), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-# from flask import Flask, jsonify, render_template_string
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# from io import BytesIO
-# import base64
-# from flask_cors import CORS
-
-# app = Flask(__name__)
-# CORS(app, origins="http://localhost:3000")
-
-# @app.route('/get_chart_data/<state_name>')
-# def get_chart_data(state_name):
-#     try:
-#         # Assuming CSV files are named as StateName.csv (e.g., AndhraPradesh.csv)
-#         csv_path = f"{state_name}.csv"
-        
-#         # Your Python code
-#         data = pd.read_csv(csv_path)
-
-#         plt.figure(figsize=(10, 6))
-#         plt.barh(data['Name/Address'], data['Installed Capacity (MTA)'])
-#         plt.title('Vertical Bar Chart')
-#         plt.xlabel('Installed Capacity (MTA)')
-#         plt.ylabel('Name/Address')
-
-#         # Save the plot to a BytesIO object
-#         image_stream = BytesIO()
-#         plt.savefig(image_stream, format='png')
-#         image_stream.seek(0)
-
-#         # Encode the image as base64
-#         image_base64 = base64.b64encode(image_stream.read()).decode('utf-8')
-
-#         return jsonify({'chartData': image_base64})
-#     except FileNotFoundError:
-#         return jsonify({'error': 'File not found'})
-
-# if __name__ == '__main__':
-#     app.run(debug=True)

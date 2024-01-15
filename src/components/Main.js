@@ -1,8 +1,99 @@
-import React from 'react'
-import styled from 'styled-components'
+import React , {useState} from 'react'
+import styled ,{ keyframes }from 'styled-components'
 import { Link } from 'react-router-dom'
+import Popup from './Popup'
+import axios from 'axios';
 
 const Main = () => {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const stateOption = [
+    '<--Select State-->',
+    'Air Conditioners',
+    'Audio Players (MP3 Players)',
+    'Audio Receivers',
+    'Blu-ray Players',
+    'Camcorders',
+    'Calculators',
+    'Car Electronics (e.g., GPS Navigation Systems)',
+    'Cassette Players',
+    'Computer Mice',
+    'Copiers',
+    'Cordless Phones',
+    'Desktop Computers',
+    'Digital Cameras',
+    'Digital Clocks',
+    'Digital Thermostats',
+    'DVD Players',
+    'Electric Heaters',
+    'External Hard Drives',
+    'Fax Machines',
+    'Fitness Trackers',
+    'Gaming Consoles',
+    'GPS Devices',
+    'Home Appliances (Refrigerators, Washing Machines, etc.)',
+    'Home Theater Systems',
+    'Internal Hard Drives',
+    'Keyboards',
+    'Laptop Computers',
+    'Landline Telephones',
+    'Medical Equipment (X-ray Machines, Ultrasound Machines)',
+    'Microwave Ovens',
+    'Monitors (LCD, LED, CRT)',
+    'Pagers',
+    'Plasma Display Panel',
+    'Precious Metals',
+    'Printers (Dot Matrix)',
+    'Printers (Inkjet, Laser)',
+    'Radios',
+    'Scanners',
+    'Smartphones',
+    'Smoke Detectors',
+    'Solid State Drives (SSDs)',
+    'Speakers',
+    'Steel Chassis',
+    'Tablets',
+    'Televisions (LCD, LED, Plasma)',
+    'Transistors',
+    'Uttar Pradesh',
+    'Video Game Controllers',
+    'VCRs (Video Cassette Recorders)',
+    'Walkie Talkies',
+    'West Bengal',
+  ];
+  
+
+  // const handleOpenPopup = () => {
+  //   const randomIndex = Math.floor(Math.random() * stateOption.length);
+  //   const randomItem = stateOption[randomIndex];
+  //   // You might want to fetch additional details from the backend here
+
+  //   setSelectedItem(randomItem);
+  //   setPopupOpen(true);
+  // };
+
+  const handleOpenPopup = async (e) => {
+   // e.preventDefault();
+   const randomIndex = Math.floor(Math.random() * stateOption.length);
+   const randomItem = stateOption[randomIndex];
+   console.log(randomItem)
+
+    try {
+      const response = await axios.post('http://localhost:5000/get_item_details', { randomItem });
+      setSelectedItem(response.data);
+      setPopupOpen(true);
+      console.log("Data get")
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setSelectedItem(null);
+    }
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+  };
   return (
     <Container>
       <TextContent>
@@ -17,7 +108,7 @@ const Main = () => {
              </div>
             {/* </div> */}
           {/* </div> */}
-        </RenovateTag>
+        </RenovateTag>    
         <RenovateText>
 
 
@@ -69,13 +160,40 @@ const Main = () => {
         </div>
       </ImgContent>
 
+      {isPopupOpen && (
+        <Popup
+          itemDetails={selectedItem}
+          onClose={handleClosePopup}
+        />
+      )}
 
+      <FixedButton onClick={handleOpenPopup}>
+        {/* Add a button or symbol here */}
+        <button>Open Popup</button>
+      </FixedButton>
 
     </Container>
   )
 }
 
 export default Main
+const FixedButton = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Ensure it's above other elements */
+`;
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Adjust the initial position as needed */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 const Container = styled.div`
   display: flex;
   //margin-top: 50px;
@@ -93,7 +211,7 @@ const Container = styled.div`
   }
 `
 const TextContent = styled.div`
-    
+    animation: ${fadeIn} 1s ease-in-out;
 `
 const RenovateTag = styled.div`
   //padding-bottom: 100px;
@@ -400,6 +518,7 @@ const ImgContent = styled.div`
     left: 880px; */
     //margin-bottom: 80px;
     //padding-left: 250px;
+    animation: ${fadeIn} 1s ease-in-out;
     
     .box {
   background-color: transparent;

@@ -138,8 +138,14 @@ if (user) {
           <Link to='tradinglp'>
           <span>Ecommerce</span>
           </Link>
-          <span onClick={() => scrollToSection('categories-section')}>Features</span>
-          <span>About Us</span>
+          <Link to='chatbot'>
+          <span>Education</span>
+          </Link>
+          <Link to='graph'>
+          <span>Statatic</span>
+          </Link>
+          {/* <span onClick={() => scrollToSection('categories-section')}>Features</span> */}
+          {/* <span>About Us</span> */}
         </NavMenu>
       </Rgt>
       {/* <Button> <p>{t('getinapp')}</p></Button> */}
@@ -306,6 +312,7 @@ const Button1 = styled.div`
     font-size: 16px;
     line-height: 24px;
     color:#FFFFFF;
+    //text-decoration: none;
   }
  
   
@@ -363,6 +370,7 @@ const Button = styled.div`
     border-radius: 20px;
     margin-right: 30px;
     opacity: 1;
+    text-decoration: none;
 
     p {
         padding-bottom: 4px;
@@ -373,6 +381,7 @@ const Button = styled.div`
         font-size: 16px;
         line-height: 24px;
         padding-left: 16px;
+        
     }
     img{
      max-height: 25px;

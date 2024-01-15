@@ -1,0 +1,1145 @@
+{
+    "ewasteproducts": {
+      "item1": {
+        "productName": "Desktop Computers",
+        "components": {
+          "Electronic Components": [
+            "Microprocessors",
+            "Capacitors",
+            "Resistors",
+            "Transistors"
+          ],
+          "Circuit Boards": [
+            "Motherboard",
+            "Graphics Card",
+            "Memory Modules"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Steel Chassis",
+            "Aluminum Heat Sinks"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver",
+            "Palladium"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury", "Brominated Flame Retardants"],
+        "description": "Desktop computers are versatile computing devices used for various tasks.",
+        "preciousElements": ["Gold", "Silver", "Palladium"]
+      },
+      "item2": {
+        "productName": "Laptop Computers",
+        "components": {
+          "Electronic Components": [
+            "Microprocessors",
+            "Capacitors",
+            "Resistors",
+            "Transistors"
+          ],
+          "Circuit Boards": [
+            "Motherboard",
+            "Graphics Card",
+            "Memory Modules"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Steel Chassis",
+            "Aluminum Heat Sinks"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver",
+            "Palladium"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury", "Brominated Flame Retardants"],
+        "description": "Laptop computers offer portability and computing power in a compact form.",
+        "preciousElements": ["Gold", "Silver", "Palladium"]
+      },
+      "item3": {
+        "productName": "Smartphones",
+        "components": {
+          "Electronic Components": [
+            "Microprocessors",
+            "Capacitors",
+            "Resistors",
+            "Transistors"
+          ],
+          "Circuit Boards": [
+            "Motherboard",
+            "Graphics Card",
+            "Memory Modules"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Steel Chassis",
+            "Aluminum Heat Sinks"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver",
+            "Palladium"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury", "Cadmium"],
+        "description": "Smartphones are essential communication and computing devices.",
+        "preciousElements": ["Gold", "Palladium"]
+      },
+      "item4": {
+        "productName": "Tablets",
+        "components": {
+          "Electronic Components": [
+            "Microprocessors",
+            "Capacitors",
+            "Resistors",
+            "Transistors"
+          ],
+          "Circuit Boards": [
+            "Motherboard",
+            "Graphics Card",
+            "Memory Modules"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Steel Chassis",
+            "Aluminum Heat Sinks"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver",
+            "Palladium"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury", "Brominated Flame Retardants"],
+        "description": "Tablets are compact, portable computing devices with touchscreen interfaces.",
+        "preciousElements": ["Gold", "Silver", "Palladium"]
+      },
+      "item5": {
+        "productName": "Monitors (LCD, LED, CRT)",
+        "components": {
+          "Electronic Components": [
+            "LCD Panels",
+            "LED Backlights",
+            "Cathode Ray Tubes (CRTs)"
+          ],
+          "Plastic Casings": [
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Stand"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury", "Phosphor"],
+        "description": "Monitors are display devices used with computers or as TV screens.",
+        "preciousElements": ["Gold", "Silver"]
+      },
+      "item6": {
+        "productName": "Printers (Inkjet, Laser)",
+        "components": {
+          "Electronic Components": [
+            "Print Heads",
+            "Circuit Boards",
+            "Motors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Trays"
+          ],
+          "Metal Components": [
+            "Frame"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Printers are devices that produce hard copies of digital documents.",
+        "preciousElements": ["Gold", "Silver"]
+      },
+      "item7": {
+        "productName": "Scanners",
+        "components": {
+          "Electronic Components": [
+            "Image Sensors",
+            "Circuit Boards",
+            "Motors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Lids"
+          ],
+          "Metal Components": [
+            "Frame"
+          ],
+          "Precious Metals": [
+            "Gold",
+            "Silver"
+          ]
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Scanners are used to create digital copies of physical documents or images.",
+        "preciousElements": ["Gold", "Silver"]
+      },
+      "item8": {
+        "productName": "Keyboards",
+        "components": {
+          "Electronic Components": [
+            "Key Switches",
+            "Circuit Boards",
+            "Connectors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keys"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Keyboards are input devices used to type on computers and other devices.",
+        "preciousElements": []
+      },
+      "item9": {
+        "productName": "Computer Mice",
+        "components": {
+          "Electronic Components": [
+            "Optical Sensor",
+            "Circuit Boards",
+            "Buttons"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Computer mice are pointing devices used to navigate on computers.",
+        "preciousElements": []
+      },
+      "item10": {
+        "productName": "External Hard Drives",
+        "components": {
+          "Electronic Components": [
+            "Hard Drive Disk",
+            "Circuit Boards",
+            "Connectors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Cables"
+          ],
+          "Metal Components": [
+            "Enclosure"
+          ],
+          "Precious Metals": ["Gold", "Silver"]
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "External hard drives are used to store and backup digital data externally.",
+        "preciousElements": ["Gold", "Silver"]
+      },
+      "item11": {
+        "productName": "Solid State Drives (SSDs)",
+        "components": {
+          "Electronic Components": [
+            "Memory Chips",
+            "Circuit Boards",
+            "Connectors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Solid State Drives (SSDs) are storage devices that use NAND flash memory.",
+        "preciousElements": []
+      },
+      "item12": {
+        "productName": "Internal Hard Drives",
+        "components": {
+          "Electronic Components": [
+            "Hard Drive Disk",
+            "Circuit Boards",
+            "Connectors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Internal hard drives are used for storage within computers and other devices.",
+        "preciousElements": []
+      },
+      "item13": {
+        "productName": "Digital Cameras",
+        "components": {
+          "Electronic Components": [
+            "Image Sensor",
+            "Circuit Boards",
+            "LCD Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Digital cameras are used to capture and store digital photographs.",
+        "preciousElements": []
+      },
+      "item14": {
+        "productName": "Camcorders",
+        "components": {
+          "Electronic Components": [
+            "Image Sensor",
+            "Circuit Boards",
+            "LCD Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Camcorders are used to record video and audio content.",
+        "preciousElements": []
+      },
+      "item15": {
+        "productName": "Audio Players (MP3 Players)",
+        "components": {
+          "Electronic Components": [
+            "Microprocessor",
+            "Circuit Boards",
+            "Audio Codec"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Audio players, or MP3 players, are used for playing digital audio files.",
+        "preciousElements": []
+      },
+      "item16": {
+        "productName": "Gaming Consoles",
+        "components": {
+          "Electronic Components": [
+            "Central Processing Unit (CPU)",
+            "Graphics Processing Unit (GPU)",
+            "Memory Modules"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Gaming consoles are dedicated devices for playing video games.",
+        "preciousElements": []
+      },
+      "item17": {
+        "productName": "Home Theater Systems",
+        "components": {
+          "Electronic Components": [
+            "Amplifiers",
+            "Receivers",
+            "Speakers"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Speaker Cabinets"
+          ],
+          "Metal Components": [
+            "Amplifier Chassis",
+            "Speaker Frames"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Home theater systems provide audio and visual entertainment in a single package.",
+        "preciousElements": []
+      },
+      "item18": {
+        "productName": "Televisions (LCD, LED, Plasma)",
+        "components": {
+          "Electronic Components": [
+            "LCD/LED Panels",
+            "Plasma Display Panel",
+            "Circuit Boards"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Bezel"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Stand"
+          ],
+          "Precious Metals": ["Gold", "Silver"]
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Televisions, in various technologies, are common home entertainment devices.",
+        "preciousElements": ["Gold", "Silver"]
+      },
+      "item19": {
+        "productName": "DVD Players",
+        "components": {
+          "Electronic Components": [
+            "Laser Pickup",
+            "Circuit Boards",
+            "Drive Mechanism"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "DVD players are used to play digital versatile discs (DVDs) for video playback.",
+        "preciousElements": []
+      },
+      "item20": {
+        "productName": "Blu-ray Players",
+        "components": {
+          "Electronic Components": [
+            "Laser Pickup",
+            "Circuit Boards",
+            "Drive Mechanism"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Blu-ray players are used to play high-definition optical discs (Blu-ray) for video playback.",
+        "preciousElements": []
+      },
+      "item21": {
+        "productName": "Audio Receivers",
+        "components": {
+          "Electronic Components": [
+            "Amplifiers",
+            "Circuit Boards",
+            "Connectors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Amplifier Chassis"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Lead", "Mercury"],
+        "description": "Audio receivers are used to process and amplify audio signals for home entertainment.",
+        "preciousElements": []
+      },
+      "item22": {
+        "productName": "Speakers",
+        "components": {
+          "Electronic Components": [],
+          "Plastic Casings": [
+            "Speaker Cabinets"
+          ],
+          "Metal Components": [
+            "Speaker Frames",
+            "Speaker Cones"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Speakers are devices that produce sound from electrical audio signals.",
+        "preciousElements": []
+      },
+      "item23": {
+        "productName": "Home Appliances (Refrigerators, Washing Machines, etc.)",
+        "components": {
+          "Electronic Components": [],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panels"
+          ],
+          "Metal Components": [
+            "Compressors",
+            "Tub Drums"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Chlorofluorocarbons (CFCs)", "Refrigerants"],
+        "description": "Home appliances like refrigerators and washing machines offer convenience in daily life.",
+        "preciousElements": []
+      },
+      "item24": {
+        "productName": "Microwave Ovens",
+        "components": {
+          "Electronic Components": [
+            "Magnetron",
+            "Circuit Boards",
+            "Control Panel"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keypad"
+          ],
+          "Metal Components": [
+            "Cavity",
+            "Door Frame"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Microwave ovens are kitchen appliances used for cooking and heating food quickly.",
+        "preciousElements": []
+      },
+      "item25": {
+        "productName": "Digital Clocks",
+        "components": {
+          "Electronic Components": [
+            "Quartz Movement",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Digital clocks are timekeeping devices with electronic displays.",
+        "preciousElements": []
+      },
+      "item26": {
+        "productName": "Printers (Dot Matrix)",
+        "components": {
+          "Electronic Components": [
+            "Print Head",
+            "Circuit Boards",
+            "Motor"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Dot matrix printers use pins to print characters and images.",
+        "preciousElements": []
+      },
+      "item27": {
+        "productName": "Fax Machines",
+        "components": {
+          "Electronic Components": [
+            "Fax Modem",
+            "Circuit Boards",
+            "Printer Mechanism"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Fax machines transmit documents electronically over telephone lines.",
+        "preciousElements": []
+      },
+      "item28": {
+        "productName": "Copiers",
+        "components": {
+          "Electronic Components": [
+            "Copier Drum",
+            "Circuit Boards",
+            "Print Head"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Copiers produce paper copies of documents or images.",
+        "preciousElements": []
+      },
+      "item29": {
+        "productName": "Air Conditioners",
+        "components": {
+          "Electronic Components": [
+            "Control Circuitry",
+            "Inverter System",
+            "Sensors"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [
+            "Compressor",
+            "Heat Exchanger"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Refrigerants"],
+        "description": "Air conditioners cool and dehumidify indoor air for comfort.",
+        "preciousElements": []
+      },
+      "item30": {
+        "productName": "Electric Heaters",
+        "components": {
+          "Electronic Components": [],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [
+            "Heating Element"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Electric heaters provide warmth through electrical resistance heating.",
+        "preciousElements": []
+      },
+      "item31": {
+        "productName": "GPS Devices",
+        "components": {
+          "Electronic Components": [
+            "GPS Receiver",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Casing Frame"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "GPS devices are used for navigation and location-based services.",
+        "preciousElements": []
+      },
+      "item32": {
+        "productName": "Medical Equipment (X-ray Machines, Ultrasound Machines)",
+        "components": {
+          "Electronic Components": [
+            "X-ray Tube",
+            "Ultrasound Transducer",
+            "Control Panels"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [
+            "Casing Frame",
+            "Support Structures"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Medical equipment like X-ray machines and ultrasound machines are used for diagnostic imaging in healthcare.",
+        "preciousElements": []
+      },
+      "item33": {
+        "productName": "Fitness Trackers",
+        "components": {
+          "Electronic Components": [
+            "Sensors",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Straps"
+          ],
+          "Metal Components": [
+            "Clasps",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Fitness trackers are wearable electronic devices designed to help individuals monitor and track various aspects of their physical activity, health, and wellness. These devices feature sensors to measure metrics such as steps taken, heart rate, sleep patterns, and more. They often include circuit boards for processing data and displaying information, as well as plastic casings for durability and comfort. The straps, typically made of plastic or rubber, secure the device to the wearer's wrist. While they contain some electronic components, fitness trackers are generally designed for safe and reliable use in promoting a healthier and more active lifestyle.",
+        "preciousElements": []
+      },
+      "item34": {
+        "productName": "Radios",
+        "components": {
+          "Electronic Components": [
+            "Tuner",
+            "Circuit Boards",
+            "Speakers"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panel"
+          ],
+          "Metal Components": [
+            "Chassis",
+            "Antenna"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Radios are electronic devices used to receive and play audio broadcasts, including music, news, and talk shows. They typically feature electronic components like tuners, circuit boards, and speakers for audio output. The housing shell and control panel are often made of plastic, while the chassis and antenna may contain metal components. Radios provide a convenient way to access a wide range of audio content.",
+        "preciousElements": []
+      },
+      "item35": {
+        "productName": "Cordless Phones",
+        "components": {
+          "Electronic Components": [
+            "DECT Module",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keypad"
+          ],
+          "Metal Components": [
+            "Antenna",
+            "Frame"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Cordless phones are telephone devices that offer the convenience of mobility within a certain range. They feature electronic components such as DECT modules, circuit boards, and displays for call information. The housing shell and keypad are typically made of plastic, while the antenna and frame may contain metal components. Cordless phones provide the freedom to make and receive calls without being tethered to a fixed location.",
+        "preciousElements": []
+      },
+      "item36": {
+        "productName": "Landline Telephones",
+        "components": {
+          "Electronic Components": [
+            "Keypad",
+            "Circuit Boards",
+            "Receiver"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Handset Cord"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Landline telephones are communication devices that connect to the traditional telephone network. They feature electronic components like keypads, circuit boards, and receivers for audio communication. The housing shell and buttons are typically made of plastic, while the frame and handset cord may contain metal components. Landline telephones provide a reliable means of voice communication for homes and businesses.",
+        "preciousElements": []
+      },
+      "item37": {
+        "productName": "VCRs (Video Cassette Recorders)",
+        "components": {
+          "Electronic Components": [
+            "Videocassette Mechanism",
+            "Circuit Boards",
+            "Tape Head"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Chassis",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "VCRs are electronic devices used for playing and recording video content on videocassettes. They feature electronic components such as videocassette mechanisms, circuit boards, and tape heads for video playback and recording. The housing shell and buttons are typically made of plastic, while the chassis and connectors may contain metal components. VCRs were popular for home entertainment before the rise of digital media.",
+        "preciousElements": []
+      },
+      "item38": {
+        "productName": "Cassette Players",
+        "components": {
+          "Electronic Components": [
+            "Cassette Mechanism",
+            "Circuit Boards",
+            "Playback Head"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Chassis",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Cassette players are electronic devices designed to play audio content from cassette tapes. They contain electronic components like cassette mechanisms, circuit boards, and playback heads for audio playback. The housing shell and buttons are typically made of plastic, while the chassis and connectors may contain metal components. Cassette players were widely used for portable audio entertainment.",
+        "preciousElements": []
+      },
+      "item39": {
+        "productName": "Video Game Controllers",
+        "components": {
+          "Electronic Components": [
+            "Buttons",
+            "Circuit Boards",
+            "Thumbsticks"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Video game controllers are input devices used to interact with video game consoles and computers. They feature electronic components like buttons, circuit boards, and thumbsticks for gameplay. The housing shell and buttons are typically made of plastic, while the frame and connectors may contain metal components. Video game controllers provide a means of controlling characters and actions in video games.",
+        "preciousElements": []
+      },
+      "item40": {
+        "productName": "Walkie Talkies",
+        "components": {
+          "Electronic Components": [
+            "Transceiver",
+            "Circuit Boards",
+            "Antenna"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Antenna"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Walkie talkies are handheld two-way radio communication devices. They feature electronic components like transceivers, circuit boards, and antennas for radio communication. The housing shell and buttons are typically made of plastic, while the frame and antennas may contain metal components. Walkie talkies provide convenient wireless communication for various purposes.",
+        "preciousElements": []
+      },
+      "item41": {
+        "productName": "Calculators",
+        "components": {
+          "Electronic Components": [
+            "Processor",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keypad"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Calculators are electronic devices used for performing mathematical calculations. They feature electronic components like processors, circuit boards, and displays for numeric input and output. The housing shell and keypad are typically made of plastic. Calculators provide a handy tool for various calculations in education and business.",
+        "preciousElements": []
+      },
+      "item42": {
+        "productName": "Scientific Instruments (e.g., Lab Equipment)",
+        "components": {
+          "Electronic Components": [
+            "Sensors",
+            "Circuit Boards",
+            "Displays"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Control Panels"
+          ],
+          "Metal Components": [
+            "Frames",
+            "Support Structures"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Scientific instruments and lab equipment are used for various research and analysis purposes. They feature electronic components such as sensors, circuit boards, and displays for data collection and analysis. The housing shell and control panels are typically made of plastic, while the frames and support structures may contain metal components. Scientific instruments play a crucial role in scientific research and experimentation.",
+        "preciousElements": []
+      },
+      "item43": {
+        "productName": "Electronic Toys and Gadgets",
+        "components": {
+          "Electronic Components": [
+            "Microcontrollers",
+            "Circuit Boards",
+            "LEDs"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Wiring",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Electronic toys and gadgets are interactive and entertaining devices designed for play and amusement. They feature electronic components like microcontrollers, circuit boards, and LEDs for various functions and effects. The housing shell and buttons are typically made of plastic, while wiring and connectors may contain metal components. Electronic toys and gadgets provide fun and engaging experiences for users of all ages.",
+        "preciousElements": []
+      },
+      "item44": {
+        "productName": "Pagers",
+        "components": {
+          "Electronic Components": [
+            "Pager Receiver",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Pagers are electronic communication devices used to receive short messages and notifications. They feature electronic components like pager receivers, circuit boards, and displays for message reception. The housing shell and buttons are typically made of plastic, while the frame and connectors may contain metal components. Pagers provide a simple and reliable means of receiving important messages.",
+        "preciousElements": []
+      },
+      "item45": {
+        "productName": "Digital Thermostats",
+        "components": {
+          "Electronic Components": [
+            "Temperature Sensors",
+            "Circuit Boards",
+            "Digital Displays"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keypad"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Digital thermostats are electronic devices used to control and monitor temperature settings in various applications, such as heating and cooling systems. They feature electronic components like temperature sensors, circuit boards, and digital displays for temperature adjustments. The housing shell and keypad are typically made of plastic. Digital thermostats offer energy-efficient and precise temperature control.",
+        "preciousElements": []
+      },
+      "item46": {
+        "productName": "Smoke Detectors",
+        "components": {
+          "Electronic Components": [
+            "Smoke Sensor",
+            "Circuit Boards",
+            "Alarm Sounder"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Test Button"
+          ],
+          "Metal Components": [
+            "Mounting Bracket"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Radioactive Material (in some ionization smoke detectors)"],
+        "description": "Smoke detectors are safety devices designed to detect the presence of smoke and fire. They feature electronic components like smoke sensors, circuit boards, and alarm sounders for early fire detection. The housing shell and test button are typically made of plastic, while the mounting bracket may contain metal components. Note that some ionization smoke detectors may contain a small amount of radioactive material for detection purposes.",
+        "preciousElements": []
+      },
+      "item47": {
+        "productName": "Car Electronics (e.g., GPS Navigation Systems)",
+        "components": {
+          "Electronic Components": [
+            "GPS Receiver",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Mounting Bracket",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Car electronics, including GPS navigation systems, are electronic devices designed for use in vehicles to provide navigation assistance and entertainment. They feature electronic components like GPS receivers, circuit boards, and displays for navigation and multimedia functions. The housing shell and buttons are typically made of plastic, while the mounting bracket and connectors may contain metal components. Car electronics enhance the driving experience by offering navigation, music, and other features.",
+        "preciousElements": []
+      },
+      "item49": {
+        "productName": "Electronic Toys and Gadgets",
+        "components": {
+          "Electronic Components": [
+            "Microcontrollers",
+            "Circuit Boards",
+            "LEDs"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Wiring",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Electronic toys and gadgets are interactive and entertaining devices designed for play and amusement. They feature electronic components like microcontrollers, circuit boards, and LEDs for various functions and effects. The housing shell and buttons are typically made of plastic, while wiring and connectors may contain metal components. Electronic toys and gadgets provide fun and engaging experiences for users of all ages.",
+        "preciousElements": []
+      },
+      "item50": {
+        "productName": "Pagers",
+        "components": {
+          "Electronic Components": [
+            "Pager Receiver",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Frame",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Pagers are electronic communication devices used to receive short messages and notifications. They feature electronic components like pager receivers, circuit boards, and displays for message reception. The housing shell and buttons are typically made of plastic, while the frame and connectors may contain metal components. Pagers provide a simple and reliable means of receiving important messages.",
+        "preciousElements": []
+      },
+      "item51": {
+        "productName": "Digital Thermostats",
+        "components": {
+          "Electronic Components": [
+            "Temperature Sensors",
+            "Circuit Boards",
+            "Digital Displays"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Keypad"
+          ],
+          "Metal Components": [],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Digital thermostats are electronic devices used to control and monitor temperature settings in various applications, such as heating and cooling systems. They feature electronic components like temperature sensors, circuit boards, and digital displays for temperature adjustments. The housing shell and keypad are typically made of plastic. Digital thermostats offer energy-efficient and precise temperature control.",
+        "preciousElements": []
+      },
+      "item52": {
+        "productName": "Smoke Detectors",
+        "components": {
+          "Electronic Components": [
+            "Smoke Sensor",
+            "Circuit Boards",
+            "Alarm Sounder"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Test Button"
+          ],
+          "Metal Components": [
+            "Mounting Bracket"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": ["Radioactive Material (in some ionization smoke detectors)"],
+        "description": "Smoke detectors are safety devices designed to detect the presence of smoke and fire. They feature electronic components like smoke sensors, circuit boards, and alarm sounders for early fire detection. The housing shell and test button are typically made of plastic, while the mounting bracket may contain metal components. Note that some ionization smoke detectors may contain a small amount of radioactive material for detection purposes.",
+        "preciousElements": []
+      },
+      
+      "item53": {
+        "productName": "Car Electronics (e.g., GPS Navigation Systems)",
+        "components": {
+          "Electronic Components": [
+            "GPS Receiver",
+            "Circuit Boards",
+            "Display"
+          ],
+          "Plastic Casings": [
+            "Housing Shell",
+            "Buttons"
+          ],
+          "Metal Components": [
+            "Mounting Bracket",
+            "Connectors"
+          ],
+          "Precious Metals": []
+        },
+        "harmfulElements": [],
+        "description": "Car electronics, including GPS navigation systems, are electronic devices designed for use in vehicles to provide navigation assistance and entertainment. They feature electronic components like GPS receivers, circuit boards, and displays for navigation and multimedia functions. The housing shell and buttons are typically made of plastic, while the mounting bracket and connectors may contain metal components. Car electronics enhance the driving experience by offering navigation, music, and other features.",
+        "preciousElements": []
+      }
+      
+      
+            
+      
+      
+      
+      
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    }
+  }
