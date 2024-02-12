@@ -14,7 +14,6 @@ CORS(app, origins="http://localhost:3000")
 #@app.route('/get_chart_data/<state_name>')
 def index():    
     return render_template_string('<div id="chart"></div>')
-
 @app.route('/get_chart_data')
 @app.route('/get_chart_data/<state_name>')
 #def get_chart_data():
