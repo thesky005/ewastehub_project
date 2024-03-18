@@ -18,6 +18,7 @@ import TradingHero from './components/TradingHero';
 import Footer from './components/Footer';
 import Graph from './components/Graph';
 import UserCart from './components/UserCart'
+import MyChatComponent from './components/MyChatComponent ';
 
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="/chatbot" element={<Chatbot />} />
             <Route path="/graph" element={<Graph/>} />
             <Route path="/usercart" element={<UserCart/>} />
+            <Route path="/mychatcomponent" element={<MyChatComponent/>} />
             
             {/* <Route path="/bussiness" element={<Bussiness/>}/> */}
             {/* <Route path="/finanicial" element={<Finanicial/>}/> */}

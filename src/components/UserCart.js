@@ -5,7 +5,9 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 import { useParams } from "react-router-dom";
+import { loadStripe } from '@stripe/stripe-js';
 
+const stripePromise = loadStripe('pk_test_51OpDLISGI9eUr3ggtMQdIQ9uZ7hGAWX5MsOLLhd1ZTPL1lL8iAc57r9dHrMxNCXZ7NSSMMULCzPs5Fdtau8dFO460061GRL0oy');
 
 
 const UserCart = () => {
@@ -13,9 +15,9 @@ const UserCart = () => {
     const user =  firebase.auth().currentUser;
     //console.log("User UID get : ",user.uid)
   
-    const { id } = useParams();
+    const { id } = useParams(); 
     
-  
+   
     const [cart , setcart] = useState([]);
   
     
@@ -47,6 +49,80 @@ const UserCart = () => {
         alert("User is not authenticated. Please log in");
       }
     }, [user]);
+
+  //   const handleCheckout = async () => {
+  //     const stripe = await stripePromise;
+  //     const response = await fetch('/your-server-endpoint-for-payment', {
+  //         method: 'POST',
+  //         headers: {
+  //             'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify({ items: cart }),
+  //     });
+  //     const session = await response.json();
+  //     const result = await stripe.redirectToCheckout({
+  //         sessionId: session.id,
+  //     });
+  //     if (result.error) {
+  //         console.error(result.error);
+  //         // Handle error
+  //     }
+  // };
+//   const handleCheckout = async () => {
+//     try {
+//         const response = await fetch('http://localhost:5000/api/payment', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ items: cart }),
+//         });
+//         const session = await response.json();
+//         const stripe = await stripePromise;
+//         const result = await stripe.redirectToCheckout({
+//             sessionId: session.sessionId,
+//         });
+//         if (result.error) {
+//             console.error("Errrrrrrrrrrrrrro : ",result.error);
+//             // Handle error
+//         }
+//     } catch (error) {
+//         console.error('Error:', error);
+//         // Handle error
+//     }
+// };
+
+const handleCheckout = async () => {
+  try {
+      const response = await fetch('http://localhost:5000/api/payment', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ items: cart }),
+      });
+      const session = await response.json();
+
+      if (session.sessionId) {
+          const stripe = await stripePromise;
+          const result = await stripe.redirectToCheckout({
+              sessionId: session.sessionId,
+          });
+          if (result.error) {
+              console.error(result.error);
+              // Handle error
+          }
+      } else {
+          console.error('Error: No session ID received from server');
+          // Handle error
+      }
+  } catch (error) {
+      console.error('Error:', error);
+      // Handle error
+  }
+};
+
+
   return (
     <>
       <Wrapper>
@@ -78,6 +154,23 @@ const UserCart = () => {
             </Card>
           ))}
         </Content>
+
+        <BuyButton onClick={handleCheckout}>
+        
+            {/* <Link to='trading'> */}
+            <div className="box">
+              <div className="get-started-box-wrapper">
+                <div className="get-started-box">
+                  <div className="overlap-group">
+                    <div className="rectangle" />
+                    <div className="text-wrapper">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* </Link> */}
+          
+        </BuyButton>
       </Wrapper>
     </>
   );
@@ -86,7 +179,80 @@ const UserCart = () => {
 export default UserCart;
 
 
+const BuyButton = styled.div`
+  margin-right: 2rem;
+  cursor: pointer;
+    .box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    }
 
+    .box .get-started-box-wrapper {
+    border: 0px none;
+    height: 4.711rem;
+    overflow-x: hidden;
+    width: 11.65rem;
+    }
+
+    .box .get-started-box {
+    height: 4.688rem;
+    width: 10.25rem;
+    }
+
+    .box .overlap-group {
+    height: 4.688rem;
+    position: relative;
+    width: 11.25rem;
+
+    }
+
+    .box .rectangle {
+    background: linear-gradient(180deg, rgb(29, 3, 71) 0%, rgba(29, 3, 71, 0.75) 77.92%);
+    border-radius: 20px;
+    height: 4.188rem;
+    width: 11rem;
+    }
+
+    .box .text-wrapper {
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 1.25rem;
+    font-weight: 600;
+    left: 2.9rem;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1.438rem;
+    width: 8.313rem;
+    }
+
+    /* @media screen and (max-width: 768px) {
+       // display: table-row;
+        justify-content: center;
+        } */
+
+  @media screen and (max-width: 768px) {
+  .box {
+    //flex-direction: column;
+   // align-items: center;
+   //justify-content: center;
+   padding: 20px 0;
+   padding-left: 5px;
+  }
+  .box .overlap-group {
+    //padding-left: 15px;
+
+    }
+
+  .box .get-started-box-wrapper {
+    //width: 100%;
+    //padding-left: 25px;
+  }
+}
+`
 const Wrapper = styled.main`
 
   margin-top: 56px ;

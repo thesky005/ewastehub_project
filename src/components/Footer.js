@@ -26,21 +26,22 @@ const Footer = () => {
                         </ul>
                     </ContentItem>
                     <ContentItem>
-                        <h3>Contractors</h3>
+                        <h3>Quick Link</h3>
                         <ul>
-                            <li>Unlock Your Potential</li>
-                                <li>Join Our Premier General</li>
-                                <li>Contractor Network</li>
-                                <li>Expand Your Horizons</li>
+                            <li>Home</li>
+                            <li>Find Locator</li>
+                                <li>Ecommerce Platform</li>
+                                <li>Statistic</li>
+                                <li>Ewaste Chatbot</li>
                         </ul>
                     </ContentItem>
                     <ContentItem>
-                        <h3>Renovations</h3>
+                        <h3>Contact Us</h3>
                         <ul>
-                        <li>Renovation Simplified</li>
-                    <li>How It Works</li>
-                    <li>Contractor Vetting Excellence</li>
-                    <li>Streamlined Bidding</li>
+                        <li>Phone : 999999999</li>
+                    <li>Email : abc@gmail.com</li>
+                    <li>Address : ShivajiNagar, Pune</li>
+                    
                         </ul>
                     </ContentItem>
                 </Content>

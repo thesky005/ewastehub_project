@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+// import { Form, Dropdown } from 'react-bootstrap';
 
 const EwasteFacility = () => {
   const db = firebase.firestore();
@@ -14,6 +15,15 @@ const EwasteFacility = () => {
   const [searchTerm, setSearchTerm] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [stateName, setStateName] = useState('');
+
+  const stateOptions = ['<--Select State-->','AndhraPradesh', 'goa', 'Assam', 'Gujarat' , 'delhi' ,'haryana' , 'westbengal' , 'uttarpradesh' ,'tamilnadu' ,'rajasthan', 'punjab' , 'odisha', 'maharastra','madhyapradesh' , 'karnataka', 'jharkhand', 'jammu_kashmir'];
+
+
+
+  const handleSelectChange = (e) => {
+    setStateName(e.target.value);
+  };
 
   useEffect(() => {
     const unsubscribe = db.collection('Location').limit(100).onSnapshot(querySnapshot => {
@@ -97,6 +107,17 @@ const EwasteFacility = () => {
           value={searchTermCity}
           onChange={(e) => setSearchTermCity(e.target.value)}
         />
+       {/* <StyledLabel>
+            
+            Select State  :
+            <SelectInput value={stateName} onChange={handleSelectChange}>
+              {stateOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </SelectInput>
+          </StyledLabel> */}
         <SearchInput
           type="text"
           placeholder="Enter Your State"
@@ -130,7 +151,21 @@ const EwasteFacility = () => {
 
 export default EwasteFacility;
 
+const SelectInput = styled.select`
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0 12px;
+  width: 264px;
+`;
 
+const StyledLabel = styled.label`
+  margin-right: 12px;
+  font-size: 16px;
+  font-family: "Inter-Medium", Helvetica;
+
+`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;

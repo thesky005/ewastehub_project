@@ -142,7 +142,10 @@ if (user) {
           <span>Education</span>
           </Link>
           <Link to='graph'>
-          <span>Statatic</span>
+          <span>Statistics</span>
+          </Link>
+          <Link to='mychatcomponent'>
+          <span>ChatBot</span>
           </Link>
           {/* <span onClick={() => scrollToSection('categories-section')}>Features</span> */}
           {/* <span>About Us</span> */}
@@ -152,10 +155,16 @@ if (user) {
       <Left>
         <Lft>
           <Link to={'usercart'}>
-          <Button>
+          {/* <Button>
             <img src='\images\trolley.png'></img>
             <p>Cart</p>
-            </Button>
+            </Button> */}
+            {isUserLoggedIn && (
+        <Button>
+          <img src='\images\trolley.png' alt="Cart" />
+          <p>Cart</p>
+        </Button>
+      )}
             </Link>
           {isUserLoggedIn ? (
             <div className="user-icon">
@@ -266,7 +275,7 @@ const Logo = styled.div`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
 
   a{
     text-decoration: none;
@@ -358,7 +367,6 @@ img{
 
 
 const Button = styled.div`
-   
     position: relative;
     width: 156px;
     height: 40px;
@@ -370,7 +378,6 @@ const Button = styled.div`
     border-radius: 20px;
     margin-right: 30px;
     opacity: 1;
-    text-decoration: none;
 
     p {
         padding-bottom: 4px;
@@ -381,14 +388,16 @@ const Button = styled.div`
         font-size: 16px;
         line-height: 24px;
         padding-left: 16px;
-        
+        text-decoration: none; /* This should remove underline */
     }
-    img{
-     max-height: 25px;
-  }
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+
+    img {
+        max-height: 25px;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 const DropDown = styled.div`
   opacity: 0;
