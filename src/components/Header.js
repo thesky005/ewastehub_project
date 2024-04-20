@@ -136,10 +136,10 @@ if (user) {
           <span>Home</span>
           </Link>
           <Link to='tradinglp'>
-          <span>Ecommerce</span>
+          <span>MarketPlace</span>
           </Link>
           <Link to='chatbot'>
-          <span>Education</span>
+          <span>Awareness</span>
           </Link>
           <Link to='graph'>
           <span>Statistics</span>

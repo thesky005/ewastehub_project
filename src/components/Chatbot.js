@@ -75,7 +75,7 @@ const Chatbot = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/get_item_details', { productName });
+      const response = await axios.post('https://ewastehubflask.onrender.com/get_item_details', { productName });
       setItemDetails(response.data);
       console.log("Data get")
     } catch (error) {

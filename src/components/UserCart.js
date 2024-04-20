@@ -94,7 +94,7 @@ const UserCart = () => {
 
 const handleCheckout = async () => {
   try {
-      const response = await fetch('http://localhost:5000/api/payment', {
+      const response = await fetch('https://ewastehubflask.onrender.com/api/payment', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

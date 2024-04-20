@@ -45,7 +45,7 @@ const Graph = () => {
   const fetchData = async () => {
     try {
       // Fetch chart data from the Flask server based on the selected state
-      const response = await fetch(`http://localhost:5000/get_chart_data/${stateName}`);
+      const response = await fetch(`https://ewastehubflask.onrender.com/get_chart_data/${stateName}`);
       //const response = await fetch(`https://adorable-cowboy-hat-deer.cyclic.app/get_chart_data/${stateName}`);
       const data = await response.json();
 
